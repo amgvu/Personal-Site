@@ -20,11 +20,11 @@ a {
 }
 @layer base {
   @font-face {
-    font-family: "Miracle";
-    src: url("C:\USERS\APPDATA\LOCAL\MICROSOFT\WINDOWS\FONTS\SATOSHI-BOLD.OTF");
+    font-family: "Satoshi";
+    src: url("/fonts/satoshi-bold.otf");
   }
   @font-face {
-    font-family: "PP Monument Extended Light";
-    src: url("C:\USERS\APPDATA\LOCAL\MICROSOFT\WINDOWS\FONTS\SATOSHI-BOLD.TTF");
+    font-family: "Satoshi";
+    src: url("/fonts/satoshi-bold.otf");
   }
 }
