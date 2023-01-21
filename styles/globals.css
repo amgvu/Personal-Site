@@ -21,10 +21,10 @@ a {
 @layer base {
   @font-face {
     font-family: "Satoshi";
-    src: url("/fonts/satoshi-bold.otf");
+    src: url("/fonts/satoshi-medium.woff2");
   }
   @font-face {
-    font-family: "Satoshi";
-    src: url("/fonts/satoshi-bold.otf");
+      font-family: "Satoshi";
+      src: url("/fonts/satoshi-medium.woff2");
   }
 }

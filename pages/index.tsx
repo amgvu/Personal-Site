@@ -1,4 +1,6 @@
 import Head from "next/head";
+import localFont from '@next/font/local'
+
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud } from "react-icons/fa";
