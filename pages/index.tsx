@@ -52,20 +52,16 @@ export default function Home() {
           p-10 
           py-10"
           >
-            <button
-              onClick={() => window.open("https://www.twitch.tv/xqc")}
-            >
               <Player
                 className="hover:transparent absolute right-10 
               top-40 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated hover:-translate-y-1 hover:scale-105"
-                src="https://assets2.lottiefiles.com/packages/lf20_bsMWmotRxl.json"
+              animate__delay-2s animate__animated"
+                src="https://assets10.lottiefiles.com/packages/lf20_qCRZE6vIiZ.json"
                 background="transparent"
                 style={{ height: "800px", width: "1000px" }}
                 loop
                 autoplay
               ></Player>
-            </button>
             <h2
               className="py-2 font-miracle 
             text-5xl font-medium  
