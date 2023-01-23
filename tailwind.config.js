@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     animatedSettings: {
       animationDelaySpeed: 700,
-      animatedSpeed: 600,
+      animatedSpeed: 500,
       classes: ['fadeInDown', 'fadeInLeft', 'fadeInUp', 'fadeIn', 'fadeInRight', 'zoomIn', 'delay', 'delay-1s', 'delay-2s', 'delay-3s', 'delay-4s', 'delay-5s', 'delay-0.5s']
     },
     extend: {
