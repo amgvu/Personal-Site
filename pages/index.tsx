@@ -110,7 +110,7 @@ export default function Home() {
                 <AiFillLinkedin
                   onClick={() =>
                     window.open(
-                      ""
+                      "https://www.linkedin.com/in/kevin-vu-a8764b252/"
                     )
                   }
                 />
@@ -167,9 +167,9 @@ export default function Home() {
             >
              I&apos;m a full-stack developer who started my journey, when I built my first eCommerce store selling
               clothes made by talented fashion designers in East Asia, who didn&apos;t have reliable methods to sell their
-              products to customers overseas. I never went into software development out of passion for coding, but out of
+              products to customers overseas. My enjoyment for software development never came out of passion for coding, but out of
               passion for creating and building things, reflected in my other hobbies like music production.
-              My interest for development comes out of being able to create things with an external purpose, a mission that
+              It comes out of being able to create things with an external purpose, a mission that
               exceeds myself and lets others share the experience of what I craft.
  
             </p>
@@ -198,7 +198,7 @@ export default function Home() {
             </p>
           </div>
           <h3 className="mb-20 mt-32 gap-10 text-5xl text-center py-2 font-monument 
-          leading-8 text-gray-800 animate__fadeInUp 
+          leading-8 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
             The rest of this site is currently a work in progress.
@@ -207,7 +207,7 @@ export default function Home() {
                     window.open("https://github.com/amgvu/Personal-Site")
                   }>
                 <span className="hover:underline underline-offset-2">
-                GitHub repository
+                GitHub repository :)
                 </span>
               </button>
             </p>
