@@ -1,11 +1,4 @@
 import Head from "next/head";
-import { Roboto } from '@next/font/google'
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: '400',
-})
-
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud } from "react-icons/fa";
@@ -195,178 +188,40 @@ export default function Home() {
           leading-8 text-gray-800 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
-            WIP
+              C#, C++, HTML/CSS, Java, JavaScript, Python
             </p>
             <p className="text-md py-2 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
-              WIP
+              React, Node, Tailwind, Juce
             </p>
           </div>
-          <div>
-            <h3
-              className="py-1 font-miracle text-3xl 
-            dark:text-white"
-            >
-              Projects
-            </h3>
-            <p
-              className="text-md py-2 leading-8 text-gray-800 
-            dark:text-gray-200"
-            >
-              1
+          <h3 className="mb-20 mt-32 gap-10 text-5xl text-center py-2 font-monument 
+          leading-8 text-gray-800 animate__fadeInUp 
+          animate__delay-3s animate__animated 
+          dark:text-gray-200">
+            The rest of this site is currently a work in progress.
+            <p className="text-3xl py-8 leading-8">
+              Follow the development at my <button onClick={() =>
+                    window.open("https://github.com/amgvu/Personal-Site")
+                  }>
+                <span className="hover:underline underline-offset-2">
+                GitHub repository
+                </span>
+              </button>
             </p>
-          </div>
-          <div className="gap-10 lg:flex">
-            <div
-              className="my-10 
-            flex-1 rounded-3xl p-10 
-            text-center  
-            shadow-2xl 
-            dark:bg-transparent"
-            >
-              <h3
-                className="pt-8 pb-2 text-lg 
-              font-medium text-white  "
-              >
-                hello..
-              </h3>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <h4
-                className="py-1 
-              text-gray-200"
-              >
-                1
-              </h4>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-            </div>
-            <div
-              className="my-10 flex-1 
-            rounded-3xl p-10 text-center 
-            text-white 
-            shadow-2xl 
-            dark:bg-transparent"
-            >
-              <h3
-                className="pt-8 pb-2 text-lg 
-              font-medium text-white "
-              >
-                hello..
-              </h3>
-              <p className="py-1">1</p>
-              <h4
-                className="py-1 
-              text-gray-200"
-              >
-                1
-              </h4>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-                1
-              </p>
-            </div>
-            <div
-              className="my-10 flex-1 
-            rounded-3xl p-10 text-center 
-            text-white shadow-2xl
-            dark:bg-transparent"
-            >
-              <h3
-                className="pt-8 pb-2 text-lg 
-              font-medium text-white "
-              >
-                hello..
-              </h3>
-              <p className="py-1">1</p>
-              <h4
-                className="py-1 
-              text-gray-200"
-              >
-               1
-              </h4>
-              <p
-                className="py-1 
-              text-white"
-              >
-               1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-               1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-               1
-              </p>
-              <p
-                className="py-1 
-              text-white"
-              >
-               1
-              </p>
-            </div>
-          </div>
+          </h3>
         </section>
         <section className="py-10">
           <div>
             <h3
               className="py-1 text-sm 
-          dark:text-white"
+          dark:text-white animate__fadeInUp 
+          animate__delay-3s animate__animated 
+          dark:text-gray-200"
             >
-              This site was made with React & Tailwind. Here&apos;s the source <button onClick={() =>
+              This site was made with NextJS & Tailwind. Here&apos;s the source <button onClick={() =>
                     window.open("https://github.com/amgvu/Personal-Site")
                   }>
                 <span className="hover:underline underline-offset-2">
