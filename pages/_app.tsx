@@ -1,15 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Roboto } from '@next/font/google'
+import { Inter } from '@next/font/google'
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ['latin'],
   weight: '400',
 })
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={roboto.className}>
+    <main className={inter.className}>
        <Component {...pageProps} />
     </main>
   )
