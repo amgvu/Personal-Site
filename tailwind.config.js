@@ -28,8 +28,6 @@ module.exports = {
             },
         },
       fontFamily: {
-        miracle: "Satoshi",
-        monument: "Satoshi",
       },
     },
   },

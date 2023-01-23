@@ -1,12 +1,14 @@
 import Head from "next/head";
-import localFont from '@next/font/local'
+import { Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: '400',
+})
 
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud } from "react-icons/fa";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import Image from "next/image";
-import Pic from "C:/Users/mingl/Desktop/sebastian-leonhardt-PkWac9CLWVA-unsplash.jpg";
 
 export default function Home() {
   return (
@@ -365,7 +367,7 @@ export default function Home() {
           dark:text-white"
             >
               This site was made with React & Tailwind. Here&apos;s the source <button onClick={() =>
-                    window.open("https://i.redd.it/rqac4r1wwe771.jpg")
+                    window.open("https://github.com/amgvu/Personal-Site")
                   }>
                 <span className="hover:underline underline-offset-2">
                   code

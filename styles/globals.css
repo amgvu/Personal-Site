@@ -19,12 +19,4 @@ a {
   box-sizing: border-box;
 }
 @layer base {
-  @font-face {
-    font-family: "Satoshi";
-    src: url("/fonts/satoshi-medium.woff2");
   }
-  @font-face {
-      font-family: "Satoshi";
-      src: url("/fonts/satoshi-medium.woff2");
-  }
-}
