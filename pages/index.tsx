@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>amgcodes</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
       <main
         className="
