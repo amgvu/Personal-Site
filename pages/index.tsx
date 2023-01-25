@@ -165,7 +165,7 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-             I&apos;m a full-stack developer who started my journey, when I built my first eCommerce store selling
+             I&apos;m a developer who started my journey, when I built my first eCommerce store selling
               clothes made by talented fashion designers in East Asia, who didn&apos;t have reliable methods to sell their
               products to customers overseas. My enjoyment for software development never came out of passion for coding, but out of
               passion for creating and building things, reflected in my other hobbies like music production.
