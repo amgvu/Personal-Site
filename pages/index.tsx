@@ -221,7 +221,7 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-              This site was made with NextJS & Tailwind. Here&apos;s the source <button onClick={() =>
+              This site was made with NextJS & Tailwind. Here&apos;s the <button onClick={() =>
                     window.open("https://github.com/amgvu/Personal-Site")
                   }>
                 <span className="hover:underline underline-offset-2">
