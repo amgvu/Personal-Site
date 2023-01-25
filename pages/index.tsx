@@ -23,10 +23,10 @@ export default function Home() {
             <h1 className="font-miracle text-xl"></h1>
             <ul className="flex items-center">
               <li>
-                <button
-                  onClick={() =>
-                    window.open("https://www.twitch.tv/xqc")
-                  }
+                <a
+                  href="kevinvuresume1.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="delay-10 ml-8 -translate-y-1 
                   rounded-full border-none 
                   bg-gray-700 
@@ -37,7 +37,7 @@ export default function Home() {
                   transition duration-500 ease-in-out animate__fadeInRight animate__delay-1s animate__animated hover:scale-110 hover:bg-gray-200 hover:text-gray-900"
                 >
                   Resume
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
