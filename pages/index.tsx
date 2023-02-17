@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud } from "react-icons/fa";
+import { serialize } from "v8";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             <ul className="flex items-center">
               <li>
                 <a
-                  href="kevinvuresume1.pdf"
+                  href="kvresume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="delay-10 ml-8 -translate-y-1 
