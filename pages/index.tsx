@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>amgcodes</title>
+        <title>Kevin Vu</title>
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
       <main
