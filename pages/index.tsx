@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { SiJavascript, SiPython, SiJava, SiHtml5, SiCss3, SiCsharp, SiCplusplus, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si"
 import { serialize } from "v8";
 
 export default function Home() {
@@ -54,7 +56,7 @@ export default function Home() {
               animate__delay-2s animate__animated"
                 src="https://assets10.lottiefiles.com/packages/lf20_qCRZE6vIiZ.json"
                 background="transparent"
-                style={{ height: "800px", width: "1000px" }}
+                style={{ height: "67%", width: "45%" }}
                 loop
                 autoplay
               ></Player>
@@ -124,6 +126,22 @@ export default function Home() {
               text-gray-100 transition duration-300 
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
+              
+              >
+                <MdEmail
+                  onClick={() =>
+                    window.open("mailto:kevinvu.amg@gmail.com")
+                  }
+                />
+              </button>
+              <button
+                className="delay-10 
+              flex-row 
+              gap-16 bg-transparent p-3 
+              py-3 text-5xl 
+              text-gray-100 transition duration-300 
+              ease-in-out 
+              hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               >
                 <AiFillYoutube
                   onClick={() =>
@@ -151,7 +169,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="text-center">
           <div>
             <h3
               className="py-1 font-miracle text-3xl 
@@ -166,17 +184,17 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-             I&apos;m a developer who started my journey, when I built my first eCommerce store selling
+             I&apos;m a full-stack developer who started my journey, when I built my first eCommerce store selling
               clothes made by talented fashion designers in East Asia, who didn&apos;t have reliable methods to sell their
-              products to customers overseas. My enjoyment for software development never came out of passion for coding, but out of
-              passion for creating and building things, reflected in my other hobbies like music production.
+              products to customers overseas. My enjoyment for software development comes out of
+              being able to create and build things that the world can see and experience, reflected in my other hobbies like music production.
               It comes out of being able to create things with an external purpose, a mission that
               exceeds myself and lets others share the experience of what I craft.
  
             </p>
           </div>
         </section>
-        <section>
+        <section className="text-center">
           <div>
           <h3
               className="py-1 font-miracle text-3xl
@@ -185,32 +203,46 @@ export default function Home() {
             >
               My skills and technologies.
           </h3>
-            <p className="text-md py-2 font-monument 
+            <p className="text-md space-x-4 flex flex-row justify-center py-6 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
-              C#, C++, HTML/CSS, Java, JavaScript, Python
+              <SiJavascript className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white">
+            </SiJavascript>
+              <SiJava className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiJava>
+              <SiCsharp className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiCsharp>
+              <SiPython className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiPython>
+              <SiCplusplus className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiCplusplus>
+            </p>
+            <p className="text-md space-x-4 flex flex-row justify-center py-4 font-monument 
+          leading-8 text-gray-800 animate__fadeInUp 
+          animate__delay-3s animate__animated 
+          dark:text-gray-200">
+              <SiReact className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiReact>
+              <SiNodedotjs className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiNodedotjs>
+              <SiTailwindcss className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></SiTailwindcss>
             </p>
             <p className="text-md py-2 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
-              React, Node, Tailwind, Juce
             </p>
           </div>
           <h3 className="mb-20 mt-32 gap-10 text-5xl text-center py-2 font-monument 
           leading-8 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200">
-            The rest of this site is currently a work in progress.
+            The rest of this site is currently a work in progress,
             <p className="text-3xl py-8 leading-8">
-              Follow the development at my <button onClick={() =>
-                    window.open("https://github.com/amgvu/Personal-Site")
-                  }>
-                <span className="hover:underline underline-offset-2">
-                GitHub repository :)
-                </span>
-              </button>
+              but thanks for checking it out. ☕
             </p>
           </h3>
         </section>
@@ -222,7 +254,7 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-              This site was made with NextJS & Tailwind. Here&apos;s the <button onClick={() =>
+              This site was made with React & Tailwind. Here&apos;s the <button onClick={() =>
                     window.open("https://github.com/amgvu/Personal-Site")
                   }>
                 <span className="hover:underline underline-offset-2">
