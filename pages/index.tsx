@@ -254,13 +254,7 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-              This site was made with React & Tailwind. Here&apos;s the <button onClick={() =>
-                    window.open("https://github.com/amgvu/Personal-Site")
-                  }>
-                <span className="hover:underline underline-offset-2">
-                  code
-                </span>
-              </button>
+              This site was made with React & Tailwind.
             </h3>
           </div>
         </section>
