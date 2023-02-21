@@ -30,7 +30,7 @@ export default function Home() {
                   href="KVResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="delay-10 ml-8 -translate-y-1 
+                  className="delay-10 ml-8 -translate-y-1
                   rounded-full border-none 
                   bg-gray-700 
                   px-4 
@@ -169,39 +169,35 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-center">
+        <section className="text-center mx-80">
           <div>
             <h3
-              className="py-1 font-miracle text-3xl 
+              className="py-1 font-miracle text-4xl 
           animate__fadeInUp animate__delay-3s animate__animated 
           dark:text-white"
             >
-              I&apos;m Kevin.
+              I'm Kevin.
             </h3>
             <p
-              className="text-md py-2 font-monument 
+              className="text-xl py-2 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-             I&apos;m a full-stack developer who started my journey, when I built my first eCommerce store selling
-              clothes made by talented fashion designers in East Asia, who didn&apos;t have reliable methods to sell their
-              products to customers overseas. My enjoyment for software development comes out of
-              being able to create and build things that the world can see and experience, reflected in my other hobbies like music production.
-              It comes out of being able to create things with an external purpose, a mission that
-              exceeds myself and lets others share the experience of what I craft.
- 
+             I&apos;m a full-stack developer who started my journey when I built my first eCommerce store in high-school, selling
+              techwear clothing at an affordable price. I enjoy development as it gives me the ability to build and create things that others can experience, reflected in my joy for making music.
+              I love working on coding and music projects (I suck at finishing tracks), playing video games, and watching movies or shows.
             </p>
           </div>
         </section>
         <section className="text-center">
           <div>
           <h3
-              className="py-1 font-miracle text-3xl
+              className="pt-6 pb-2 font-miracle text-4xl
             animate__fadeInUp animate__delay-3s animate__animated 
             dark:text-white"
             >
-              My skills and technologies.
+              Some languages and technologies I work with
           </h3>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
