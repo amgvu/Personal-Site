@@ -37,7 +37,7 @@ export default function Home() {
                   py-2 
                   font-miracle 
                   text-white 
-                  transition duration-500 ease-in-out animate__fadeInRight animate__delay-1s animate__animated hover:scale-110 hover:bg-gray-200 hover:text-gray-900"
+                  transition duration-400 ease-in-out animate__fadeInRight animate__delay-1s animate__animated hover:scale-110 hover:bg-gray-200 hover:text-gray-900"
                 >
                   Resume
                 </a>
@@ -94,7 +94,7 @@ export default function Home() {
               flex-row gap-16 bg-transparent 
               p-3 py-3 
               text-5xl text-gray-100 transition 
-              duration-300 
+              duration-200 
               ease-in-out hover:-translate-y-1 hover:scale-110 dark:text-gray-400"
               >
                 <AiFillGithub
@@ -106,7 +106,7 @@ export default function Home() {
               flex-row 
               gap-16 bg-transparent p-3 
               py-3 text-5xl 
-              text-gray-100 transition duration-300 
+              text-gray-100 transition duration-200 
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               >
@@ -123,7 +123,7 @@ export default function Home() {
               flex-row 
               gap-16 bg-transparent p-3 
               py-3 text-5xl 
-              text-gray-100 transition duration-300 
+              text-gray-100 transition duration-200 
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               
@@ -139,7 +139,7 @@ export default function Home() {
               flex-row 
               gap-16 bg-transparent p-3 
               py-3 text-5xl 
-              text-gray-100 transition duration-300 
+              text-gray-100 transition duration-200 
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               >
@@ -156,7 +156,7 @@ export default function Home() {
               flex-row 
               gap-16 bg-transparent p-3 
               py-3 text-5xl 
-              text-gray-100 transition duration-300 
+              text-gray-100 transition duration-200 
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               >
@@ -186,7 +186,7 @@ export default function Home() {
             >
              I&apos;m a full-stack developer who started my journey when I built my first eCommerce store in high-school, selling
               techwear clothing at an affordable price. I enjoy development as it gives me the ability to build and create things that others can experience, reflected in my joy for making music.
-              I love working on coding and music projects (I suck at finishing tracks), playing video games, and watching movies or shows.
+              I like working on coding and music projects (I suck at finishing tracks), playing video games, and watching movies or shows.
             </p>
           </div>
         </section>
