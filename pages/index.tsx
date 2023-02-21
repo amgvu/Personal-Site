@@ -176,7 +176,7 @@ export default function Home() {
           animate__fadeInUp animate__delay-3s animate__animated 
           dark:text-white"
             >
-              I'm Kevin.
+              I&apos;m Kevin.
             </h3>
             <p
               className="text-xl py-2 font-monument 
