@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
-import { FaSoundcloud } from "react-icons/fa";
+import { FaSoundcloud, FaNode } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiJavascript, SiPython, SiJava, SiHtml5, SiCss3, SiCsharp, SiCplusplus, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si"
 import { serialize } from "v8";
@@ -197,7 +197,7 @@ export default function Home() {
             animate__fadeInUp animate__delay-3s animate__animated 
             dark:text-white"
             >
-              Some languages and technologies I work with
+              Here's my toolbox,
           </h3>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
@@ -221,8 +221,8 @@ export default function Home() {
           dark:text-gray-200">
               <SiReact className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
             dark:text-white"></SiReact>
-              <SiNodedotjs className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiNodedotjs>
+              <FaNode className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
+            dark:text-white"></FaNode>
               <SiTailwindcss className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
             dark:text-white"></SiTailwindcss>
             </p>
