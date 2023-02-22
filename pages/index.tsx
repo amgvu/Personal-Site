@@ -197,7 +197,7 @@ export default function Home() {
             animate__fadeInUp animate__delay-3s animate__animated 
             dark:text-white"
             >
-              Here's my toolbox,
+              Here&apos;s my toolbox,
           </h3>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 font-monument 
           leading-8 text-gray-800 animate__fadeInUp 
