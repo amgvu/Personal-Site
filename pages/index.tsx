@@ -5,6 +5,8 @@ import { FaSoundcloud, FaNode } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiJavascript, SiPython, SiJava, SiHtml5, SiCss3, SiCsharp, SiCplusplus, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si"
 import { serialize } from "v8";
+import AboutMe from "./aboutme";
+import Link from 'next/link';
 
 export default function Home() {
   return (
