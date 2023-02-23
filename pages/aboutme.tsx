@@ -46,7 +46,7 @@ export default function FirstPost() {
           animate__delay-1s animate__animated dark:text-gray-200
           md:text-xl"
           >
-            Things you probably don't care about but here they are
+            Things you probably don&apos;t care about but here they are
           </p>
           <p className="text-md py-5 
           font-monument leading-8 
