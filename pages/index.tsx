@@ -29,7 +29,7 @@ export default function Home() {
             <ul className="flex items-center">
               <li>
                 <a
-                  href="KVResumeFinal.pdf"
+                  href="resumejune2023.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="delay-10 ml-8 -translate-y-1
