@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <main
         className="
-      bg-black"
+      bg-black px-10 md:px-20 lg:px-40"
       >
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav
@@ -76,7 +76,7 @@ export default function Home() {
             animate__delay animate__animated
             md:text-5xl"
             >
-              Developer & Student
+              Full Stack Developer
             </h3>
             <p
               className="text-md max-w-xl py-5 
@@ -85,8 +85,7 @@ export default function Home() {
             animate__delay-1s animate__animated dark:text-gray-200
             md:text-xl"
             >
-              Hi, I&apos;m a guy from Houston who enjoys creating. Check me out
-              below.
+              Hey, thanks for stopping by. The background used to be cool and animated but it&apos;s looking bland at the moment :(
             </p>
             <div className="animate__fadeInDown animate__delay-1s animate__animated">
               <button
@@ -144,26 +143,9 @@ export default function Home() {
               ease-in-out 
               hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
               >
-                <AiFillYoutube
-                  onClick={() =>
-                    window.open(
-                      "https://www.youtube.com/channel/UCoqitvf9ipAlp5IR6ZvYukg/"
-                    )
-                  }
-                />
-              </button>
-              <button
-                className="delay-10 
-              flex-row 
-              gap-16 bg-transparent p-3 
-              py-3 text-5xl 
-              text-gray-100 transition duration-200 
-              ease-in-out 
-              hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
-              >
                 <FaSoundcloud
                   onClick={() =>
-                    window.open("https://soundcloud.com/user-581800726/")
+                    window.open("https://soundcloud.com/kevinvuu")
                   }
                 />
               </button>
@@ -185,9 +167,7 @@ export default function Home() {
           animate__delay-3s animate__animated 
           dark:text-gray-200"
             >
-             I&apos;m a full-stack developer who started my journey when I built my first eCommerce store in high-school, selling
-              techwear clothing at an affordable price. I enjoy development as it gives me the ability to build and create things that others can experience, reflected in my joy for making music.
-              I like working on coding and music projects (I suck at finishing tracks), playing video games, and watching movies or shows.
+             Gonna write some corny stuff here
             </p>
           </div>
         </section>
@@ -233,15 +213,6 @@ export default function Home() {
           dark:text-gray-200">
             </p>
           </div>
-          <h3 className="mb-20 mt-32 gap-10 text-5xl text-center py-2 font-monument 
-          leading-8 animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200">
-            The rest of this site is currently a work in progress,
-            <p className="text-3xl py-8 leading-8">
-              but thanks for checking it out. ☕
-            </p>
-          </h3>
         </section>
         <section className="py-10">
           <div>
