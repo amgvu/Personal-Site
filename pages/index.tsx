@@ -17,8 +17,7 @@ export default function Home() {
       </Head>
       <main
         className="
-      animate-text bg-gray-600 from-gray-700 via-black to-gray-800 px-10 
-      dark:bg-gradient-to-br md:px-20 lg:px-40"
+      bg-black"
       >
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav
