@@ -1,10 +1,12 @@
 import Head from "next/head";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import Lottie from "react-lottie-player"
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud, FaNode } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiJavascript, SiPython, SiJava, SiHtml5, SiCss3, SiCsharp, SiCplusplus, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si"
 import { serialize } from "v8";
+import ScrollingBanner from "../components/ScrollingBanner";
 import AboutMe from "./aboutme";
 import Link from 'next/link';
 
@@ -17,12 +19,12 @@ export default function Home() {
       </Head>
       <main
         className="
-      bg-black px-10 md:px-20 lg:px-40"
+      bg-[#080808] px-4 md:px-8 lg:px-16 xl:px-24"
       >
+      <ScrollingBanner text="THIS STATION IS NOW PLAYING: TREATMENT III BY KEVIN VU" />
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav
-            className="mb-12 flex justify-end py-10 
-          text-gray-200"
+            className="mb-8 flex justify-end py-4 md:py-8 text-gray-200"
           >
             <h1 className="font-miracle text-xl"></h1>
             <ul className="flex items-center">
@@ -31,7 +33,7 @@ export default function Home() {
                   href="resumejune2023.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="delay-10 ml-8 -translate-y-1
+                  className="delay-10 ml-4 md:ml-8 translate-y-1
                   rounded-full border-none 
                   bg-gray-700 
                   px-4 
@@ -51,16 +53,6 @@ export default function Home() {
           p-10 
           py-10"
           >
-              <Player
-                className="hover:transparent absolute right-10 
-              top-40 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated"
-                src="https://assets10.lottiefiles.com/packages/lf20_qCRZE6vIiZ.json"
-                background="transparent"
-                style={{ height: "67%", width: "45%" }}
-                loop
-                autoplay
-              ></Player>
             <h2
               className="py-2 font-miracle 
             text-5xl font-medium  
