@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import ReactPlayer from 'react-player'
 
-interface ScrollingBannerProps {
+interface RadioComponentProps {
   text: string;
 }
 
-const RadioComponent: React.FC<ScrollingBannerProps> = ({ text }) => {
+const RadioComponent: React.FC<RadioComponentProps> = ({ text }) => {
   return (
     <div
       style={{
