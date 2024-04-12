@@ -1,12 +1,25 @@
-import { ReactNode } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import ReactPlayer from 'react-player'
+import { FaPlay, FaPause } from "react-icons/fa";
+import ReactPlayer from "react-player";
 
 interface RadioComponentProps {
   text: string;
+  url: string;
 }
 
-const RadioComponent: React.FC<RadioComponentProps> = ({ text }) => {
+const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackPosition, setPlaybackPosition] = useState(0);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleProgress = (progress: { playedSeconds: number }) => {
+    setPlaybackPosition(progress.playedSeconds);
+  };
+
   return (
     <div
       style={{
@@ -18,6 +31,8 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text }) => {
         padding: "10px",
         borderRadius: "10px",
         overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <motion.div
@@ -29,7 +44,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text }) => {
           x: ["-106%", "106%"],
         }}
         transition={{
-          duration: 8,
+          duration: 5,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -37,9 +52,45 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text }) => {
         {text}
       </motion.div>
 
+      <div style={{ position: "absolute", right: "10px" }}>
+        <div style={{ marginLeft: "10px" }} onClick={handlePlayPause}>
+          {isPlaying ? (
+            <FaPause style={{ color: "#374151", fontSize: "24px" }} />
+          ) : (
+            <FaPlay style={{ color: "#374151", fontSize: "24px" }} />
+          )}
+        </div>
+      </div>
+
+      {isPlaying && (
+        <ReactPlayer
+          url={url}
+          playing={true}
+          controls={false}
+          volume={1}
+          width={0}
+          height={0}
+          progressInterval={1000}
+          onProgress={handleProgress}
+          config={{
+            file: {
+              attributes: {
+                preload: "auto",
+              },
+            },
+          }}
+          playbackRate={1}
+          playedSeconds={playbackPosition}
+        />
+      )}
     </div>
   );
 };
 
 export default RadioComponent;
+
+
+
+
+
 

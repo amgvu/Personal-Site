@@ -9,7 +9,8 @@ import {
 } from "react-icons/ai";
 import { 
   FaSoundcloud, 
-  FaNode 
+  FaNode,
+  FaPlay
 } from "react-icons/fa";
 import { 
   MdEmail 
@@ -65,7 +66,7 @@ export default function Home() {
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav className="mb-8 font-sans flex justify-end py-4 md:py-8 text-gray-200">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
-            <RadioComponent text="130.2 TREATMENT FM" />
+            <RadioComponent text="130.2 TREATMENT FM" url="https://soundcloud.com/differentsoundofficial/ds-premiere-urquiaga-backup"/>
             </div>
             <h1 className="font-miracle text-xl"></h1>
             <ul className="flex items-center">
