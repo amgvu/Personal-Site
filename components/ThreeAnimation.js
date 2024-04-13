@@ -15,7 +15,7 @@ const ThreeAnimation = () => {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
+    renderer.setSize(window.innerWidth * 0.55, window.innerHeight * 0.55);
     containerRef.current.appendChild(renderer.domElement);
 
     // Cube
@@ -34,8 +34,8 @@ const ThreeAnimation = () => {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += mouseRef.current.y * 0.006;
-      cube.rotation.y += mouseRef.current.x * 0.006;
+      cube.rotation.x += mouseRef.current.y * 0.01;
+      cube.rotation.y += mouseRef.current.x * 0.01;
       renderer.render(scene, camera);
     };
     animate();

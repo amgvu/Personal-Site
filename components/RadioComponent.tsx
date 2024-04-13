@@ -44,7 +44,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
           x: ["-106%", "106%"],
         }}
         transition={{
-          duration: 5,
+          duration: 3,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -55,9 +55,9 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       <div style={{ position: "absolute", right: "10px" }}>
         <div style={{ marginLeft: "10px" }} onClick={handlePlayPause}>
           {isPlaying ? (
-            <FaPause style={{ color: "#374151", fontSize: "24px" }} />
+            <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />
           ) : (
-            <FaPlay style={{ color: "#374151", fontSize: "24px" }} />
+            <FaPlay style={{ color: "#FFFFFF", fontSize: "24px" }} />
           )}
         </div>
       </div>
