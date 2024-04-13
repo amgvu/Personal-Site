@@ -67,7 +67,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
           url={url}
           playing={true}
           controls={false}
-          volume={1}
+          volume={0.5}
           width={0}
           height={0}
           progressInterval={1000}

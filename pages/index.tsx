@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from 'next/link';
 import RadioComponent from "../components/RadioComponent";
+import ThreeAnimation from "../components/ThreeAnimation";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
   AiFillLinkedin, 
@@ -66,7 +67,7 @@ export default function Home() {
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav className="mb-8 font-sans flex justify-end py-4 md:py-8 text-gray-200">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
-            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/differentsoundofficial/ds-premiere-urquiaga-backup"/>
+            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/inguma_records/uvall-against-guidelines-ngm019"/>
             </div>
             <h1 className="font-miracle text-xl"></h1>
             <ul className="flex items-center">
@@ -79,6 +80,11 @@ export default function Home() {
             </ul>
           </nav>
           <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10">
+              <div className="absolute right-10 
+              top-40 duration-300 animate__fadeIn
+              animate__delay-2s animate__animated">
+            <ThreeAnimation />
+            </div>
             <h2 className="py-2 text-5xl font-medium text-gray-200 animate__fadeIn animate__animated dark:text-gray-100 md:text-9xl">
               Kevin Vu
             </h2>
