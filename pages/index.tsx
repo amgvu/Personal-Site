@@ -67,13 +67,13 @@ export default function Home() {
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <nav className="mb-8 font-sans flex justify-end py-4 md:py-8 text-gray-200">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
-            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/inguma_records/uvall-against-guidelines-ngm019"/>
+            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/kunkel/body-language"/>
             </div>
             <h1 className="font-miracle text-xl"></h1>
             <ul className="flex items-center">
               <li>
                 <button
-                  className="delay-10 ml-4 md:ml-8 translate-y-1 rounded-full border-none bg-gray-700 px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated hover:bg-gray-200 hover:text-gray-900 cursor-pointer" onClick={openResumePdf}>
+                  className="delay-10 ml-4 md:ml-8 translate-y-1 rounded-xl border-none bg-gray-700 px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated hover:bg-gray-200 hover:text-gray-900 cursor-pointer" onClick={openResumePdf}>
                   Resume
                 </button>
               </li>
