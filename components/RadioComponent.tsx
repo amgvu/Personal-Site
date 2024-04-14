@@ -23,13 +23,14 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   return (
     <div
       style={{
-        position: "fixed",
-        top: "2.1%",
+        position: "absolute",
+        top: "2.6%",
         left: "10%",
         transform: "translateX(-50%)",
-        backgroundColor: "#101010",
-        padding: "10px",
+        backgroundColor: "transparent",
+        padding: "8.4px",
         borderRadius: "10px",
+        border: "1px solid #FFFFFF",
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
@@ -51,8 +52,12 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       >
         {text}
       </motion.div>
-
-      <div style={{ position: "absolute", right: "10px" }}>
+  
+      
+      <div style={{ 
+            position: "absolute",
+            right: "10px",  
+                   }}>
         <div style={{ marginLeft: "10px" }} onClick={handlePlayPause}>
           {isPlaying ? (
             <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />

@@ -14,13 +14,13 @@ const ThreeAnimation = () => {
     camera.position.z = 5;
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(window.innerWidth * 0.55, window.innerHeight * 0.55);
     containerRef.current.appendChild(renderer.domElement);
 
     // Cube
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF, roughness: 0.5, metalness: 1 });
+    const geometry = new THREE.IcosahedronGeometry();
+    const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF, roughness: 0.5, metalness: 1.0, wireframe: false });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -28,14 +28,14 @@ const ThreeAnimation = () => {
     const light = new THREE.PointLight(0xffffff, 10);
     light.position.set(2, 5, 5);
     scene.add(light);
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    scene.add(directionalLight);
 
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += mouseRef.current.y * 0.01;
-      cube.rotation.y += mouseRef.current.x * 0.01;
+      cube.rotation.x += mouseRef.current.y * 0.005;
+      cube.rotation.y += mouseRef.current.x * 0.005;
       renderer.render(scene, camera);
     };
     animate();
