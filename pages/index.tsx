@@ -1,228 +1,106 @@
 import Head from "next/head";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from "react-icons/ai";
-import { FaSoundcloud, FaNode } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { SiJavascript, SiPython, SiJava, SiHtml5, SiCss3, SiCsharp, SiCplusplus, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si"
-import { serialize } from "v8";
-import AboutMe from "./aboutme";
 import Link from 'next/link';
+import RadioComponent from "../components/RadioComponent";
+import ThreeAnimation from "../components/ThreeAnimation";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { 
+  AiFillLinkedin, 
+  AiFillYoutube, 
+  AiFillGithub 
+} from "react-icons/ai";
+import { 
+  FaSoundcloud, 
+  FaNode,
+  FaPlay
+} from "react-icons/fa";
+import { 
+  MdEmail,
+  MdOutlineDarkMode,
+  MdDarkMode
+} from "react-icons/md";
+
+const socialIcons = [
+  { icon: AiFillGithub, link: "https://github.com/amgvu/" },
+  { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/" },
+  { icon: MdEmail, link: "mailto:kevinvu.amg@gmail.com" },
+  { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu" }
+];
+
+const resumePdfPath = 'resumejune2023.pdf';
 
 export default function Home() {
+    const openResumePdf = () => {
+    window.open(resumePdfPath, '_blank');
+  };
+
   return (
     <div>
-      <Head>
-        <title>Kevin Vu</title>
+     <Head>
+        <title>Kevin Vu | Portfolio</title>
         <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
-      <main
-        className="
-      bg-black px-10 md:px-20 lg:px-40"
-      >
+      <main className="bg-[#080808] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <nav
-            className="mb-12 flex justify-end py-10 
-          text-gray-200"
-          >
-            <h1 className="font-miracle text-xl"></h1>
+          <nav className="mb-8 font-sans flex justify-end py-4 md:py-8 text-gray-200">
+            <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
+            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
+            </div>
+            <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>
-                <a
-                  href="resumejune2023.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="delay-10 ml-8 -translate-y-1
-                  rounded-full border-none 
-                  bg-gray-700 
-                  px-4 
-                  py-2 
-                  font-miracle 
-                  text-white 
-                  transition duration-400 ease-in-out animate__fadeInRight animate__delay-1s animate__animated hover:scale-110 hover:bg-gray-200 hover:text-gray-900"
-                >
+                <button
+                  className="delay-10 ml-4 md:ml-8 translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
                   Resume
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
-          <div
-            className="relative bottom-20 
-          flex flex-grow flex-col place-content-center 
-          p-10 
-          py-10"
-          >
-              <Player
-                className="hover:transparent absolute right-10 
+          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10">
+              <div className="absolute right-10 
               top-40 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated"
-                src="https://assets10.lottiefiles.com/packages/lf20_qCRZE6vIiZ.json"
-                background="transparent"
-                style={{ height: "67%", width: "45%" }}
-                loop
-                autoplay
-              ></Player>
-            <h2
-              className="py-2 font-miracle 
-            text-5xl font-medium  
-            text-gray-200 animate__fadeInDown 
-            animate__animated dark:text-gray-100
-            md:text-9xl"
-            >
+              animate__delay-2s animate__animated">
+            <ThreeAnimation />
+            </div>
+            <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-100 md:text-9xl">
               Kevin Vu
             </h2>
-            <h3
-              className="py-2 font-miracle text-2xl 
-            text-gray-400 animate__fadeInDown  
-            animate__delay animate__animated
-            md:text-5xl"
-            >
+            <h3 className="py-2 text-2xl font-medium text-[#8A8A8A] animate__fadeIn animate__delay animate__animated md:text-5xl">
               Full Stack Developer
             </h3>
-            <p
-              className="text-md max-w-xl py-5 
-            font-monument leading-8 
-            text-gray-200 animate__fadeInDown 
-            animate__delay-1s animate__animated dark:text-gray-200
-            md:text-xl"
-            >
-              Hey, thanks for stopping by. The background used to be cool and animated but it&apos;s looking bland at the moment :(
+            <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
+              Hey, thanks for stopping by :) I&apos;m a developer and techno artist out of Houston, TX.
             </p>
-            <div className="animate__fadeInDown animate__delay-1s animate__animated">
-              <button
-                className="delay-10 
-              hover:transparent 
-              flex-row gap-16 bg-transparent 
-              p-3 py-3 
-              text-5xl text-gray-100 transition 
-              duration-200 
-              ease-in-out hover:-translate-y-1 hover:scale-110 dark:text-gray-400"
-              >
-                <AiFillGithub
-                  onClick={() => window.open("https://github.com/amgvu/")}
-                />
-              </button>
-              <button
-                className="delay-10 
-              flex-row 
-              gap-16 bg-transparent p-3 
-              py-3 text-5xl 
-              text-gray-100 transition duration-200 
-              ease-in-out 
-              hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
-              >
-                <AiFillLinkedin
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/kevin-vu-a8764b252/"
-                    )
-                  }
-                />
-              </button>
-              <button
-                className="delay-10 
-              flex-row 
-              gap-16 bg-transparent p-3 
-              py-3 text-5xl 
-              text-gray-100 transition duration-200 
-              ease-in-out 
-              hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
-              
-              >
-                <MdEmail
-                  onClick={() =>
-                    window.open("mailto:kevinvu.amg@gmail.com")
-                  }
-                />
-              </button>
-              <button
-                className="delay-10 
-              flex-row 
-              gap-16 bg-transparent p-3 
-              py-3 text-5xl 
-              text-gray-100 transition duration-200 
-              ease-in-out 
-              hover:-translate-y-1 hover:scale-110 hover:bg-transparent dark:text-gray-400"
-              >
-                <FaSoundcloud
-                  onClick={() =>
-                    window.open("https://soundcloud.com/kevinvuu")
-                  }
-                />
-              </button>
+            <div className="animate__fadeIn animate__delay-1s animate__animated">
+              {socialIcons.map((item, index) => (
+                <button key={index} className="delay-10 flex-row gap-16 bg-transparent p-3 py-3 text-5xl text-white transition duration-100 ease-in-out hover:-translate-y-1 hover:scale-110" onClick={() => window.open(item.link)}>
+                  <item.icon />
+                </button>
+              ))}
             </div>
           </div>
         </section>
-        <section className="text-center mx-80">
+        <section className="text-center font-sans mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
           <div>
-            <h3
-              className="py-1 font-miracle text-4xl 
-          animate__fadeInUp animate__delay-3s animate__animated 
-          dark:text-white"
-            >
-              I&apos;m Kevin.
+            <h3 className="py-1 text-4xl text-white font-semibold md:text-4xl lg:text-5xl animate__fadeInUp animate__delay-3s animate__animated">
+              ⚠️ CAUTION ⚠️
             </h3>
-            <p
-              className="text-xl py-2 font-monument 
-          leading-8 text-gray-800 animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200"
-            >
-             Gonna write some corny stuff here
+            <p className="text-xl text-white md:text-1xl lg:text-2xl py-2 leading-8 animate__fadeInUp animate__delay-3s animate__animated">
+             ACTIVE CONSTRUCTION ZONE
             </p>
           </div>
         </section>
-        <section className="text-center">
+        <section className="font-sans text-center">
           <div>
-          <h3
-              className="pt-6 pb-2 font-miracle text-4xl
-            animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"
-            >
-              Here&apos;s my toolbox,
-          </h3>
-            <p className="text-md space-x-4 flex flex-row justify-center py-6 font-monument 
-          leading-8 text-gray-800 animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200">
-              <SiJavascript className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white">
-            </SiJavascript>
-              <SiJava className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiJava>
-              <SiCsharp className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiCsharp>
-              <SiPython className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiPython>
-              <SiCplusplus className="text-5xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiCplusplus>
-            </p>
-            <p className="text-md space-x-4 flex flex-row justify-center py-4 font-monument 
-          leading-8 text-gray-800 animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200">
-              <SiReact className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiReact>
-              <FaNode className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></FaNode>
-              <SiTailwindcss className="text-6xl animate__fadeInUp animate__delay-3s animate__animated 
-            dark:text-white"></SiTailwindcss>
-            </p>
-            <p className="text-md py-2 font-monument 
-          leading-8 text-gray-800 animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200">
+            <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200">
             </p>
           </div>
         </section>
         <section className="py-10">
           <div>
-            <h3
-              className="py-1 text-sm 
-          dark:text-white animate__fadeInUp 
-          animate__delay-3s animate__animated 
-          dark:text-gray-200"
-            >
-              This site was made with React & Tailwind.
+            <h3 className="py-1 text-sm dark:text-white animate__fadeInUp animate__delay-3s animate__animated">
             </h3>
           </div>
         </section>
@@ -230,3 +108,4 @@ export default function Home() {
     </div>
   );
 }
+
