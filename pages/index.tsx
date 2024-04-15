@@ -71,7 +71,7 @@ export default function Home() {
               Full Stack Developer
             </h3>
             <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
-              Hey, thanks for stopping by :) I&apos;m a developer and techno artist out of Houston, TX.
+              Hey, thanks for stopping by :)
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
