@@ -58,7 +58,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
             position: "absolute",
             right: "10px",  
                    }}>
-        <div style={{ marginLeft: "10px" }} onClick={handlePlayPause}>
+        <div style={{ marginLeft: "20px" }} onClick={handlePlayPause}>
           {isPlaying ? (
             <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />
           ) : (
