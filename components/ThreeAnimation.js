@@ -43,7 +43,7 @@ const ThreeAnimation = () => {
     // Mouse event handlers
     const handleMouseMove = (event) => {
       mouseRef.current.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouseRef.current.y = +(event.clientY / window.innerHeight) * 2 + 1;
+      mouseRef.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
     };
 
     window.addEventListener('mousemove', handleMouseMove);
