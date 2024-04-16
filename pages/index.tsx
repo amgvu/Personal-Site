@@ -44,10 +44,10 @@ export default function Home() {
       </Head>
       <main className="bg-[#080808] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
             <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
             </div>
+          <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>

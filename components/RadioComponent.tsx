@@ -22,19 +22,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 
   return (
     <div
-      style={{
-        position: "absolute",
-        top: "2.6%",
-        left: "10%",
-        overflow: "hidden",
-        transform: "translateX(-50%)",
-        backgroundColor: "transparent",
-        padding: "8.4px",
-        borderRadius: "10px",
-        border: "1px solid #FFFFFF",
-        display: "flex",
-        alignItems: "center",
-      }}
+      className="absolute top-[43px] font-sans overflow-hidden transform bg-transparent p-2 rounded-xl border border-white flex items-center"
     >
       <motion.div
         style={{
