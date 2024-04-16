@@ -48,13 +48,12 @@ export default function Home() {
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
             <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
             </div>
-            <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>
                 <button
-                  className="delay-10 ml-4 md:ml-8 translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
+                  className="delay-10 ml-4 md:ml-8 translate-y-1 font-bold rounded-xl bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black" onClick={openResumePdf}>
                   Resume
-                </button>
+               </button>
               </li>
             </ul>
           </nav>
@@ -71,7 +70,11 @@ export default function Home() {
               Full Stack Developer
             </h3>
             <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
+<<<<<<< Updated upstream
               Hey, thanks for stopping by :)
+=======
+              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX.
+>>>>>>> Stashed changes
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (

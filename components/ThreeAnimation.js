@@ -50,9 +50,9 @@ const ThreeAnimation = () => {
 
     // Resize handling
     const handleResize = () => {
-      camera.aspect = window.innerWidth * 0.6 / window.innerHeight * 0.6;
+      camera.aspect = window.innerWidth * 0.9 / window.innerHeight * 0.9;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
+      renderer.setSize(window.innerWidth * 0.9, window.innerHeight * 0.9);
     };
     window.addEventListener('resize', handleResize);
 

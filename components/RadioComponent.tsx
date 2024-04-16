@@ -16,8 +16,8 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleProgress = (progress: { playedSeconds: number }) => {
-    setPlaybackPosition(progress.playedSeconds);
+  const handleProgress = ( progress: { playedSeconds: number }) => {
+    setPlaybackPosition( progress.playedSeconds );
   };
 
   return (
@@ -26,12 +26,12 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
         position: "absolute",
         top: "2.6%",
         left: "10%",
+        overflow: "hidden",
         transform: "translateX(-50%)",
         backgroundColor: "transparent",
         padding: "8.4px",
         borderRadius: "10px",
         border: "1px solid #FFFFFF",
-        overflow: "hidden",
         display: "flex",
         alignItems: "center",
       }}
@@ -56,7 +56,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       
       <div style={{ 
             position: "absolute",
-            right: "10px",  
+            right: "10px"
                    }}>
         <div style={{ marginLeft: "20px" }} onClick={handlePlayPause}>
           {isPlaying ? (
