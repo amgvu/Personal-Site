@@ -3,15 +3,17 @@ import * as THREE from 'three';
 
 const ThreeAnimationMobile = () => {
   const containerRef = useRef();
+  const cameraRef = useRef();
 
   useEffect(() => {
     // Scene
     const scene = new THREE.Scene();
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.3, 1000);
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
     camera.position.y = -1.0;
+    cameraRef.current = camera;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -36,15 +38,17 @@ const ThreeAnimationMobile = () => {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.002;
       cube.rotation.y += 0.002;
-      renderer.render(scene, camera);
+      renderer.render(scene, cameraRef.current);
     };
     animate();
 
     // Resize handling
     const handleResize = () => {
-      camera.aspect = window.innerWidth * 0.9 / window.innerHeight * 0.9;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth * 0.9, window.innerHeight * 0.9);
+      const width = containerRef.current.offsetWidth;
+      const height = containerRef.current.offsetHeight;
+      cameraRef.current.aspect = width / height;
+      cameraRef.current.updateProjectionMatrix();
+      renderer.setSize(width, height);
     };
     window.addEventListener('resize', handleResize);
 
@@ -55,7 +59,7 @@ const ThreeAnimationMobile = () => {
     };
   }, []);
 
-  return <div className="mx-auto mt-10 flex flex-auto" ref={containerRef} />;
+  return <div className="mx-auto mt-10 flex flex-auto" style={{ width: '100%', height: '100%' }} ref={containerRef} />;
 };
 
 export default ThreeAnimationMobile;
