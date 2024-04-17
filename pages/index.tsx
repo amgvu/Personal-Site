@@ -59,6 +59,10 @@ export default function Home() {
             </ul>
           </nav>
           <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-left">
+            <div className="absolute top-20 left-0 visible sm:invisible">
+              <img  className="duration-300 animate__fadeIn
+              animate__delay-2s animate__animated" src="mobilebg.png"></img>
+            </div>
               <div className="absolute right-10 
               top-40 duration-300 animate__fadeIn
               animate__delay-2s animate__animated invisible sm:visible">

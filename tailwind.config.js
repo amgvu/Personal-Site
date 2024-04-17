@@ -23,21 +23,12 @@ module.exports = {
                 'delay-0.5s'
               ]
     },
+    backgroundImage: {
+      'mobilebg': "url('../public/mobilebg.png')",
+    },
     extend: {
       'animation': {
         'text':'text 15s ease infinite',
-      },
-      'keyframes': {
-        'text': {
-          '0%, 100%': {
-            'background-size':'400% 400%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size':'400% 400%',
-            'background-position': 'right center'
-          },
-        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'] // Include Noto Sans as the primary sans-serif font
