@@ -21,30 +21,13 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   };
 
   return (
-    <div
-      className="absolute top-[43px] font-sans overflow-hidden transform bg-transparent p-2 rounded-xl border border-white flex items-center"
-    >
-      <motion.div
-        style={{
-          whiteSpace: "nowrap",
-          color: "#fff",
-        }}
-        animate={{
-          x: ["-106%", "106%"],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-        {text}
-      </motion.div>
-  
-      
-      <div style={{ 
+    <div>
+      <div className="absolute top-[43px] font-sans transform bg-transparent p-2 rounded-xl border border-white flex items-center">
+        <div style={{ 
             position: "absolute",
-            right: "10px"
+            right: "-30px",
+            overflow: "visible",
+            top: "8px"
                    }}>
         <div style={{ marginLeft: "20px" }} onClick={handlePlayPause}>
           {isPlaying ? (
@@ -53,6 +36,27 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
             <FaPlay style={{ color: "#FFFFFF", fontSize: "24px" }} />
           )}
         </div>
+      </div>
+      <div className="overflow-hidden">
+      <motion.div
+        style={{
+          whiteSpace: "nowrap",
+          color: "#fff",
+        }}
+        animate={{
+          x: ["103%", "-103%"],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {text}
+      </motion.div>
+      </div>
+      </div>
+      <div className="absolute top-[43px] font-sans overflow-hidden transform bg-transparent p-2 rounded-xl flex items-center">
       </div>
 
       {isPlaying && (
