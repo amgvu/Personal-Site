@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from 'next/link';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
+import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
   AiFillLinkedin, 
@@ -60,8 +61,7 @@ export default function Home() {
           </nav>
           <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-left">
             <div className="absolute top-20 left-0 visible sm:invisible">
-              <img  className="duration-300 animate__fadeIn
-              animate__delay-2s animate__animated" src="mobilebg.png"></img>
+              <ThreeAnimationMobile />
             </div>
               <div className="absolute right-10 
               top-40 duration-300 animate__fadeIn
@@ -75,7 +75,7 @@ export default function Home() {
               Full Stack Developer
             </h3>
             <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
-              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX.
+              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
