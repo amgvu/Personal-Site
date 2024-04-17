@@ -10,20 +10,16 @@ import {
   AiFillGithub 
 } from "react-icons/ai";
 import { 
-  FaSoundcloud, 
+  FaSoundcloud,
+  FaDiscord,
   FaNode,
   FaPlay
 } from "react-icons/fa";
-import { 
-  MdEmail,
-  MdOutlineDarkMode,
-  MdDarkMode
-} from "react-icons/md";
 
 const socialIcons = [
   { icon: AiFillGithub, link: "https://github.com/amgvu/" },
   { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/" },
-  { icon: MdEmail, link: "mailto:kevinvu.amg@gmail.com" },
+  { icon: FaDiscord, link: "https://discord.com/users/216339214978121728"},
   { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu" }
 ];
 
