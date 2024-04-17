@@ -11,7 +11,7 @@ const ThreeAnimationMobile = () => {
     // Camera
     const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.3, 1000);
     camera.position.z = 5;
-    camera.position.y = -1.1;
+    camera.position.y = -1.4;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -34,8 +34,8 @@ const ThreeAnimationMobile = () => {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += 0.001;
-      cube.rotation.y += 0.001;
+      cube.rotation.x += 0.002;
+      cube.rotation.y += 0.002;
       renderer.render(scene, camera);
     };
     animate();
