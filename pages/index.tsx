@@ -53,7 +53,7 @@ export default function Home() {
             <ul className="flex items-center">
               <li>
                 <button
-                    className="delay-10 ml-4 md:ml-8 translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
+                    className="delay-10 ml-4 md:ml-8 translate-y-[-15px] sm:translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
                   Resume
                 </button>
               </li>
