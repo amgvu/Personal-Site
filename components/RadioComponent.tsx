@@ -25,7 +25,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       <div className="absolute top-[43px] font-sans transform bg-transparent p-2 rounded-xl border border-white flex items-center">
         <div style={{ 
             position: "absolute",
-            right: "-30px",
+            right: "-32px",
             overflow: "visible",
             top: "8px"
                    }}>

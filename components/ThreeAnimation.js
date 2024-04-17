@@ -3,6 +3,7 @@ import * as THREE from 'three';
 
 const ThreeAnimation = () => {
   const containerRef = useRef();
+  const cameraRef = useRef();
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -49,10 +50,12 @@ const ThreeAnimation = () => {
     window.addEventListener('mousemove', handleMouseMove);
 
     // Resize handling
-    const handleResize = () => {
-      camera.aspect = window.innerWidth * 0.9 / window.innerHeight * 0.9;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth * 0.9, window.innerHeight * 0.9);
+ const handleResize = () => {
+      const width = containerRef.current.offsetWidth;
+      const height = containerRef.current.offsetHeight;
+      cameraRef.current.aspect = width / height;
+      cameraRef.current.updateProjectionMatrix();
+      renderer.setSize(width, height);
     };
     window.addEventListener('resize', handleResize);
 
@@ -64,7 +67,7 @@ const ThreeAnimation = () => {
     };
   }, []);
 
-  return <div className="mx-auto mt-10 flex flex-auto" ref={containerRef} />;
+  return <div className="mx-auto mt-10 flex flex-auto" style={{ width: '100%', height: '100%' }} ref={containerRef} />;
 };
 
 export default ThreeAnimation;
