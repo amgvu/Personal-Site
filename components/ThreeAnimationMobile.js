@@ -3,7 +3,6 @@ import * as THREE from 'three';
 
 const ThreeAnimationMobile = () => {
   const containerRef = useRef();
-  const touchRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     // Scene
@@ -35,20 +34,11 @@ const ThreeAnimationMobile = () => {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += touchRef.current.y * 0.005;
-      cube.rotation.y += touchRef.current.x * 0.005;
+      cube.rotation.x += 0.001;
+      cube.rotation.y += 0.001;
       renderer.render(scene, camera);
     };
     animate();
-
-    // Touch event handlers
-    const handleTouchMove = (event) => {
-      const touch = event.touches[0];
-      touchRef.current.x = (touch.clientX / window.innerWidth) * 2 - 1;
-      touchRef.current.y = -(touch.clientY / window.innerHeight) * 2 + 1;
-    };
-
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     // Resize handling
     const handleResize = () => {
@@ -60,7 +50,6 @@ const ThreeAnimationMobile = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('resize', handleResize);
       containerRef.current.removeChild(renderer.domElement);
     };
