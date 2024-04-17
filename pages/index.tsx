@@ -60,7 +60,8 @@ export default function Home() {
             </ul>
           </nav>
           <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-left">
-            <div className="absolute top-7 left-1 visible sm:invisible">
+            <div className="absolute top-7 left-1 duration-300 animate__fadeIn
+              animate__delay-2s animate__animated visible sm:invisible">
               <ThreeAnimationMobile />
             </div>
               <div className="absolute right-10 
