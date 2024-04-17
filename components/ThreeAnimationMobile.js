@@ -9,7 +9,7 @@ const ThreeAnimationMobile = () => {
     const scene = new THREE.Scene();
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.3, 1000);
+    const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.3, 1000);
     camera.position.z = 5;
     camera.position.y = -1.4;
 
