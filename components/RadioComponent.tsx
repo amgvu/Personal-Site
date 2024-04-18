@@ -16,55 +16,47 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleProgress = (progress: { playedSeconds: number }) => {
-    setPlaybackPosition(progress.playedSeconds);
+  const handleProgress = ( progress: { playedSeconds: number }) => {
+    setPlaybackPosition( progress.playedSeconds );
   };
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "2.6%",
-        left: "10%",
-        transform: "translateX(-50%)",
-        backgroundColor: "transparent",
-        padding: "8.4px",
-        borderRadius: "10px",
-        border: "1px solid #FFFFFF",
-        overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <motion.div
-        style={{
-          whiteSpace: "nowrap",
-          color: "#fff",
-        }}
-        animate={{
-          x: ["-106%", "106%"],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-        {text}
-      </motion.div>
-  
-      
-      <div style={{ 
+    <div>
+      <div className="absolute top-[43px] font-sans transform bg-transparent p-2 rounded-xl border border-white flex items-center">
+        <div style={{ 
             position: "absolute",
-            right: "10px",  
+            right: "-32px",
+            overflow: "visible",
+            top: "8px"
                    }}>
-        <div style={{ marginLeft: "10px" }} onClick={handlePlayPause}>
+        <div style={{ marginLeft: "20px" }} onClick={handlePlayPause}>
           {isPlaying ? (
             <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />
           ) : (
             <FaPlay style={{ color: "#FFFFFF", fontSize: "24px" }} />
           )}
         </div>
+      </div>
+      <div className="overflow-hidden">
+      <motion.div
+        style={{
+          whiteSpace: "nowrap",
+          color: "#fff",
+        }}
+        animate={{
+          x: ["103%", "-103%"],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {text}
+      </motion.div>
+      </div>
+      </div>
+      <div className="absolute top-[43px] font-sans overflow-hidden transform bg-transparent p-2 rounded-xl flex items-center">
       </div>
 
       {isPlaying && (

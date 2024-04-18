@@ -2,11 +2,15 @@ import Head from "next/head";
 import Link from 'next/link';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 import EmailForm from "../components/EmailForm/EmailForm";
 import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
 >>>>>>> Stashed changes
+=======
+import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
+>>>>>>> master
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
   AiFillLinkedin, 
@@ -14,20 +18,16 @@ import {
   AiFillGithub 
 } from "react-icons/ai";
 import { 
-  FaSoundcloud, 
+  FaSoundcloud,
+  FaDiscord,
   FaNode,
   FaPlay
 } from "react-icons/fa";
-import { 
-  MdEmail,
-  MdOutlineDarkMode,
-  MdDarkMode
-} from "react-icons/md";
 
 const socialIcons = [
   { icon: AiFillGithub, link: "https://github.com/amgvu/" },
   { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/" },
-  { icon: MdEmail, link: "mailto:kevinvu.amg@gmail.com" },
+  { icon: FaDiscord, link: "https://discord.com/users/216339214978121728"},
   { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu" }
 ];
 
@@ -49,24 +49,28 @@ export default function Home() {
       </Head>
       <main className="bg-[#080808] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <nav className="mb-8 font-sans flex justify-end py-4 md:py-8 text-gray-200">
-            <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold">
-            <RadioComponent text="TREATMENT 130.2 FM" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
+            <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
+            <RadioComponent text="Now on air: Kevin Vu - TREATMENT III" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
             </div>
+          <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>
                 <button
-                  className="delay-10 ml-4 md:ml-8 translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
+                    className="delay-10 ml-4 md:ml-8 translate-y-[-15px] sm:translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
                   Resume
                 </button>
               </li>
             </ul>
           </nav>
-          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10">
+          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-left">
+            <div className="absolute top-7 left-1 duration-300 animate__fadeIn
+              animate__delay-2s animate__animated visible sm:invisible">
+              <ThreeAnimationMobile />
+            </div>
               <div className="absolute right-10 
               top-40 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated">
+              animate__delay-2s animate__animated invisible sm:visible">
             <ThreeAnimation />
             </div>
             <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-100 md:text-9xl">
@@ -76,11 +80,11 @@ export default function Home() {
               Full Stack Developer
             </h3>
             <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
-              Hey, thanks for stopping by :) I&apos;m a developer and techno artist out of Houston, TX.
+              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
-                <button key={index} className="delay-10 flex-row gap-16 bg-transparent p-3 py-3 text-5xl text-white transition duration-100 ease-in-out hover:-translate-y-1 hover:scale-110" onClick={() => window.open(item.link)}>
+                <button key={index} className="delay-10 flex-row gap-16 bg-transparent p-2 sm:p-3 py-3 text-5xl text-white transition duration-100 ease-in-out hover:-translate-y-1" onClick={() => window.open(item.link)}>
                   <item.icon />
                 </button>
               ))}
