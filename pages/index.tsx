@@ -2,6 +2,11 @@ import Head from "next/head";
 import Link from 'next/link';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
+<<<<<<< Updated upstream
+=======
+import EmailForm from "../components/EmailForm/EmailForm";
+import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
+>>>>>>> Stashed changes
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
   AiFillLinkedin, 
@@ -101,6 +106,7 @@ export default function Home() {
         <section className="py-10">
           <div>
             <h3 className="py-1 text-sm dark:text-white animate__fadeInUp animate__delay-3s animate__animated">
+            <EmailForm />
             </h3>
           </div>
         </section>

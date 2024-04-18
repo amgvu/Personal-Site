@@ -23,6 +23,13 @@ module.exports = {
                 'delay-0.5s'
               ]
     },
+<<<<<<< Updated upstream
+=======
+    backgroundImage: {
+      'mobilebg': "url('../public/mobilebg.png')",
+      'bgbig': "url('../public/bgbig.png')"
+    },
+>>>>>>> Stashed changes
     extend: {
       'animation': {
         'text':'text 15s ease infinite',
