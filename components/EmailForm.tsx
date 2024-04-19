@@ -3,6 +3,13 @@ import React, { useState, FormEvent } from 'react';
 const EmailForm: React.FC = () => {
   const [result, setResult] = useState<string>("");
 
+  const autoResize = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  };
+
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
@@ -72,11 +79,12 @@ const EmailForm: React.FC = () => {
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-white leading-tight focus:outline-none focus:shadow-outline resize-y"
+            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-white leading-tight focus:outline-none focus:shadow-outline resize-none"
             id="message"
             name="message"
             placeholder="Enter your message"
             required
+            onInput={autoResize}
           />
         </div>
         <div className="flex items-center justify-between">
