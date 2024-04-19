@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from 'next/link';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
-import EmailForm from "../components/EmailForm/EmailForm";
+import EmailForm from "../components/EmailForm";
 import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
@@ -92,7 +92,7 @@ export default function Home() {
         </section>
         <section className="py-10">
           <div>
-            <h3 className="py-1 text-sm dark:text-white animate__fadeInUp animate__delay-1s animate__animated">
+            <h3 className="py-1 text-sm dark:text-white animate__fadeIn animate__delay-1s animate__animated">
             <EmailForm />
             </h3>
           </div>
