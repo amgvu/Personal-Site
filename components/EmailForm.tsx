@@ -46,7 +46,7 @@ const EmailForm: React.FC = () => {
           Drop one below and I&apos;ll respond as soon as I can.
         </h2>
       </div>
-      <form onSubmit={handleSubmit} className="bg-transparent rounded-xl px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit} className="bg-transparent rounded-xl pt-6 pb-8 mb-4">
         <input type="hidden" name="access_key" value="96e4193d-f096-4980-8582-19d27b3eb24d"></input>
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
