@@ -84,16 +84,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-center font-sans mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
-          <div>
-            <h3 className="py-1 text-4xl text-white font-semibold md:text-4xl lg:text-5xl animate__fadeInUp animate__delay-3s animate__animated">
-              ⚠️ CAUTION ⚠️
-            </h3>
-            <p className="text-xl text-white md:text-1xl lg:text-2xl py-2 leading-8 animate__fadeInUp animate__delay-3s animate__animated">
-             ACTIVE CONSTRUCTION ZONE
-            </p>
-          </div>
-        </section>
         <section className="font-sans text-center">
           <div>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200">
@@ -102,7 +92,7 @@ export default function Home() {
         </section>
         <section className="py-10">
           <div>
-            <h3 className="py-1 text-sm dark:text-white animate__fadeInUp animate__delay-3s animate__animated">
+            <h3 className="py-1 text-sm dark:text-white animate__fadeInUp animate__delay-1s animate__animated">
             <EmailForm />
             </h3>
           </div>

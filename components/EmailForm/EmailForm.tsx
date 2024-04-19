@@ -6,10 +6,7 @@ const EmailForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Send email logic would go here, but typically you'd do this on the server side
-    // You would need a backend server to handle sending the email
     console.log(`Email: ${email}, Message: ${message}`);
-    // Reset form fields after submission
     setEmail('');
     setMessage('');
   };
@@ -43,7 +40,7 @@ const EmailForm: React.FC = () => {
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-white leading-tight focus:outline-none focus:shadow-outline resize-none"
+            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-white leading-tight focus:outline-none focus:shadow-outline resize-y"
             id="message"
             placeholder="Enter your message"
             value={message}
