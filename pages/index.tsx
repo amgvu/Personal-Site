@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from 'next/link';
+import { motion } from "framer-motion"
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
 import EmailForm from "../components/EmailForm";
@@ -49,10 +50,28 @@ export default function Home() {
             <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>
-                <button
-                    className="delay-10 ml-4 md:ml-8 translate-y-[-15px] sm:translate-y-1 font-bold rounded-xl border-none bg-transparent px-4 py-2 text-white ease-in-out transition duration-100 animate__fadeIn animate__delay-1s animate__animated outline outline-1 hover:bg-white hover:text-black cursor-pointer" onClick={openResumePdf}>
-                  Resume
-                </button>
+                <motion.button
+                    className="px-6 py-2 rounded-md relative radial-gradient ease-in-out animate__fadeIn animate__delay-1s animate__animated" initial={{ "--x": "100%", scale: 1 } as any} animate={{ "--x": "-100%" }as any} whileTap={{ scale: 0.97 }} transition={{
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        repeatDelay: 1,
+                        type: "spring",
+                        stiffness: 20,
+                        damping: 15,
+                        mass: 2,
+                        scale: {
+                          type: "spring",
+                          stiffness: 10,
+                          damping: 5,
+                          mass: 0.1,
+                      }
+                    }} onClick={openResumePdf}>
+                  <span className="text-neutral-100 tracking-wide font-light
+                                  h-full w-full block relative linear-mask">
+                    Resume
+                  </span>
+                  <span className="block absolute inset-0 rounded-md p-px linear-overlay"/>
+                </motion.button>
               </li>
             </ul>
           </nav>
