@@ -41,7 +41,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
-      <main className="bg-[#080808] px-4 md:px-8 lg:px-16 xl:px-32">
+      <main className="bg-[#000000] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             <RadioComponent text="Now on air: Kevin Vu - TREATMENT III" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
