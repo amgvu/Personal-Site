@@ -82,7 +82,7 @@ export default function Home() {
               <ThreeAnimationMobile />
             </div>
             <div className="absolute right-2 top-[-90px] bottom-10 flex justify-center items-center h-screen w-full" style={{ zIndex: 0, pointerEvents: 'none' }}>
-              <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated">
+              <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated sm:visible invisible">
                 <ThreeAnimation />
               </div>
             </div>
