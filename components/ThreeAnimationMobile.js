@@ -11,7 +11,7 @@ const ThreeAnimationMobile = () => {
     // Camera
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
-    camera.position.y = -1.0;
+    camera.position.y = -0.7;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -26,9 +26,9 @@ const ThreeAnimationMobile = () => {
 
     // Lights
     const light = new THREE.PointLight(0xffffff, 10);
-    light.position.set(2, 5, 5);
+    light.position.set(5, -5, 5);
     scene.add(light);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
     scene.add(directionalLight);
 
     // Animation
