@@ -19,15 +19,16 @@ import {
 } from "react-icons/fa";
 
 const socialIcons = [
-  { icon: AiFillGithub, link: "https://github.com/amgvu/" },
-  { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/" },
-  { icon: FaDiscord, link: "https://discord.com/users/216339214978121728"},
-  { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu" }
+  { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "Github" },
+  { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/", title: "Linkedin" },
+  { icon: FaDiscord, link: "https://discord.com/users/216339214978121728", title: "Discord"},
+  { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu", title: "Soundcloud" }
 ];
 
 const resumePdfPath = 'resumejune2023.pdf';
 
 export default function Home() {
+
     const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
   };
@@ -75,15 +76,15 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-left">
+          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
             <div className="absolute top-7 left-1 duration-300 animate__fadeIn
               animate__delay-2s animate__animated visible sm:invisible">
               <ThreeAnimationMobile />
             </div>
-              <div className="absolute right-10 
-              top-40 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated invisible sm:visible">
-            <ThreeAnimation />
+            <div className="absolute right-2 flex justify-center items-center h-screen w-full">
+              <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated">
+                <ThreeAnimation />
+              </div>
             </div>
             <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-100 md:text-9xl">
               Kevin Vu
@@ -91,8 +92,8 @@ export default function Home() {
             <h3 className="py-2 text-2xl font-medium text-[#8A8A8A] animate__fadeIn animate__delay animate__animated md:text-5xl">
               Full Stack Developer
             </h3>
-            <p className="text-md max-w-xl py-5 leading-8 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
-              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX
+            <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
+              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX 
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
