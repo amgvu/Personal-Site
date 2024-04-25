@@ -15,7 +15,7 @@ const ThreeAnimation = () => {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth * 0.60, window.innerHeight * 0.60);
+    renderer.setSize(window.innerWidth * 0.70, window.innerHeight * 0.70);
     containerRef.current.appendChild(renderer.domElement);
 
     // Cube
@@ -26,7 +26,7 @@ const ThreeAnimation = () => {
 
     // Lights
     const light = new THREE.PointLight(0xffffff, 4);
-    light.position.set(3, -5, 5);
+    light.position.set(5, -5, 5);
     scene.add(light);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
     scene.add(directionalLight);
