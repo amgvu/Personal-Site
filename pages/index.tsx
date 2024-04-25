@@ -52,7 +52,7 @@ export default function Home() {
             <ul className="flex items-center">
               <li>
                 <motion.button
-                    className="px-6 py-2 rounded-md relative radial-gradient ease-in-out animate__fadeIn animate__delay-1s animate__animated" initial={{ "--x": "100%", scale: 1 } as any} animate={{ "--x": "-100%" }as any} whileTap={{ scale: 0.97 }} transition={{
+                        className="px-6 py-2 rounded-md relative radial-gradient ease-in-out animate__fadeIn animate__delay-1s animate__animated" initial={{ "--x": "100%", scale: 1 } as any} animate={{ "--x": "-100%" }as any} whileTap={{ scale: 0.97 }} transition={{
                         repeat: Infinity,
                         repeatType: "loop",
                         repeatDelay: 1,
@@ -81,7 +81,7 @@ export default function Home() {
               animate__delay-2s animate__animated visible sm:invisible">
               <ThreeAnimationMobile />
             </div>
-            <div className="absolute right-2 flex justify-center items-center h-screen w-full">
+            <div className="absolute right-2 top-[-90px] bottom-10 flex justify-center items-center h-screen w-full" style={{ zIndex: 0, pointerEvents: 'none' }}>
               <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated">
                 <ThreeAnimation />
               </div>

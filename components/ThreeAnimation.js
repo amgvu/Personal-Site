@@ -34,8 +34,8 @@ const ThreeAnimation = () => {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += mouseRef.current.y * 0.005;
-      cube.rotation.y += mouseRef.current.x * 0.005;
+      cube.rotation.x -= mouseRef.current.y * 0.005;
+      cube.rotation.y -= mouseRef.current.x * 0.005;
       renderer.render(scene, camera);
     };
     animate();
