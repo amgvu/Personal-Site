@@ -1,14 +1,15 @@
 import React, { useState, FormEvent } from 'react';
+import { motion } from 'framer-motion';
 
 const EmailForm: React.FC = () => {
   const [result, setResult] = useState<string>("");
+  const [buttonVisible, setButtonVisible] = useState<boolean>(true);
 
   const autoResize = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const textarea = event.target;
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   };
-
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -25,29 +26,28 @@ const EmailForm: React.FC = () => {
 
       const data = await response.json();
 
-        if (data.success) {
-          setResult("Email successfully sent!");
-          event.currentTarget.reset();
-        } else {
-          console.error("Error:", data);
-          setResult(data.message);
-        }
-      } catch (error) {
-        }
-    };
+      if (data.success) {
+        setResult("Email successfully sent!");
+        setButtonVisible(false);
+        event.currentTarget.reset();
+      } else {
+        console.error("Error:", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <div className="max-w-md mx-auto">
       <div className="space-y-1 py-4">
-        <h1 className="font-semibold text-center text-3xl">
-          Wanna send a message?
-        </h1>
-        <h2 className="font-light text-center text-xl">
-          Drop one below and I&apos;ll respond as soon as I can.
-        </h2>
+        <h1 className="font-semibold text-center text-3xl">Wanna send a message?</h1>
+        <h2 className="font-light text-center text-xl">Drop one below and I&apos;ll respond as soon as I can.</h2>
       </div>
       <form onSubmit={handleSubmit} className="bg-transparent rounded-xl pt-6 pb-8 mb-4">
-        <input type="hidden" name="access_key" value="96e4193d-f096-4980-8582-19d27b3eb24d"></input>
+        <input type="hidden" name="access_key" value="96e4193d-f096-4980-8582-19d27b3eb24d" />
+
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
             Name
@@ -61,6 +61,7 @@ const EmailForm: React.FC = () => {
             required
           />
         </div>
+
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
             Email
@@ -74,6 +75,7 @@ const EmailForm: React.FC = () => {
             required
           />
         </div>
+
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
             Message
@@ -87,18 +89,44 @@ const EmailForm: React.FC = () => {
             onInput={autoResize}
           />
         </div>
+
         <div className="flex items-center justify-between">
-          <button
-            className="bg-transparent outline outline-1 rounded-xl hover:bg-white hover:text-black text-white font-bold py-2 px-4 ease-in-out transition duration-100 focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Send
-          </button>
+          {buttonVisible ? (
+            <motion.button
+              className="px-6 py-2 rounded-md relative radial-gradient ease-in-out animate__fadeIn animate__delay-1s animate__animated"
+              initial={{ "--x": "100%", scale: 1 } as any}
+              animate={{ "--x": "-100%" } as any}
+              whileTap={{ scale: 0.97 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                repeatDelay: 1,
+                type: "spring",
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+                scale: {
+                  type: "spring",
+                  stiffness: 10,
+                  damping: 5,
+                  mass: 0.1,
+                },
+              }}
+              type="submit"
+            >
+              <span className="text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask">
+                Send
+              </span>
+              <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
+            </motion.button>
+          ) : (
+            <p className="text-neutral-100">{result}</p>
+          )}
         </div>
       </form>
-      {result && <p>{result}</p>}
     </div>
   );
 };
 
 export default EmailForm;
+
