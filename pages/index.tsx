@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { motion } from "framer-motion"
-import LoadingSpinner from '../components/LoadingSpinner';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
 import EmailForm from "../components/EmailForm";
@@ -33,21 +31,9 @@ const resumePdfPath = 'resumejune2023.pdf';
 
 export default function Home() {
 
-    const [isLoading, setIsLoading] = useState(true);
-
     const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
   };
-
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1500);
-    }, []);
-
-    if (isLoading) {
-        return <LoadingSpinner />;
-    }
 
   return (
     <div>
