@@ -47,7 +47,7 @@ export default function Home() {
       <main className="bg-[#000000] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
-            <RadioComponent text="Now on air: Kevin Vu - TREATMENT I" url="https://soundcloud.com/kevinvuu/figures"/>
+            <RadioComponent text="Now on air: Kevin Vu - TREATMENT IV" url="https://soundcloud.com/kevinvuu/treatment-iv"/>
             </div>
           <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
