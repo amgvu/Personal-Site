@@ -35,6 +35,20 @@ export default function Home() {
     window.open(resumePdfPath, '_blank');
   };
 
+
+const handleScrollDown = (): void => {
+    // Find the second section
+    const secondSection = document.querySelector('section:nth-of-type(2)') as HTMLElement;
+    
+    if (secondSection) {
+        // Scroll to the second section smoothly
+        window.scrollTo({
+            top: secondSection.offsetTop,
+            behavior: 'smooth' // Smooth scrolling effect
+        });
+    }
+};
+
   return (
     <div>
      <Head>
@@ -110,7 +124,7 @@ export default function Home() {
             
           </h3>
           <button className="text-4xl mx-auto text-white flex justify-center animate__fadeIn
-              animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1">
+              animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1" onClick={handleScrollDown}>
           <SlArrowDown />
         </button>
         </div>
