@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { motion } from "framer-motion"
+import LoadingSpinner from '../components/LoadingSpinner';
 import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
 import EmailForm from "../components/EmailForm";
@@ -11,6 +13,8 @@ import {
   AiFillYoutube, 
   AiFillGithub 
 } from "react-icons/ai";
+import { SlArrowDown } from "react-icons/sl";
+
 import { 
   FaSoundcloud,
   FaDiscord,
@@ -29,9 +33,21 @@ const resumePdfPath = 'resumejune2023.pdf';
 
 export default function Home() {
 
+    const [isLoading, setIsLoading] = useState(true);
+
     const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
   };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1500);
+    }, []);
+
+    if (isLoading) {
+        return <LoadingSpinner />;
+    }
 
   return (
     <div>
@@ -103,6 +119,15 @@ export default function Home() {
               ))}
             </div>
           </div>
+          <div className="my-3 text-white grid grid-cols-1 justify-center">
+          <h3 className="font-sans text-center">
+            
+          </h3>
+          <button className="text-4xl mx-auto text-white flex justify-center animate__fadeIn
+              animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1">
+          <SlArrowDown />
+        </button>
+        </div>
         </section>
         <section className="font-sans text-center">
           <div>
