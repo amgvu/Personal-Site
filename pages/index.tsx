@@ -124,7 +124,8 @@ const handleScrollDown = (): void => {
             
           </h3>
           <button className="text-4xl mx-auto text-white flex justify-center animate__fadeIn
-              animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1" onClick={handleScrollDown}>
+              animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1" 
+              onClick={handleScrollDown}>
           <SlArrowDown />
         </button>
         </div>

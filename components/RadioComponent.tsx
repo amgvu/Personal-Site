@@ -29,7 +29,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
             overflow: "visible",
             top: "8px"
                    }}>
-        <div style={{ marginLeft: "20px" }} className="cursor-pointer"onClick={handlePlayPause}>
+        <div style={{ marginLeft: "20px" }} className="cursor-pointer" onClick={handlePlayPause}>
           {isPlaying ? (
             <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />
           ) : (
