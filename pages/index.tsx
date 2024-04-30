@@ -37,20 +37,18 @@ export default function Home() {
 
 
 const handleScrollDown = (): void => {
-    // Find the second section
     const secondSection = document.querySelector('section:nth-of-type(2)') as HTMLElement;
     
     if (secondSection) {
-        // Scroll to the second section smoothly
         window.scrollTo({
             top: secondSection.offsetTop,
-            behavior: 'smooth' // Smooth scrolling effect
+            behavior: 'smooth'
         });
     }
 };
 
   return (
-    <div>
+    <div className="scrollbar-hide">
      <Head>
         <title>Kevin Vu | Portfolio</title>
         <link rel="icon" href="/favicon/favicon.ico" />
