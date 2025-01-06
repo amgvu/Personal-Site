@@ -59,7 +59,7 @@ const handleScrollDown = (): void => {
       <main className="bg-[#000000] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
             <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
-            <RadioComponent text="Now on air: Kevin Vu - TREATMENT III" url="https://soundcloud.com/kevinvuu/treatment-iii"/>
+            <RadioComponent text="Now on air: Kevin Vu - DANCE TRAX" url="https://soundcloud.com/kevinvuu/dancetrax"/>
             </div>
           <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
@@ -107,7 +107,7 @@ const handleScrollDown = (): void => {
               Full Stack Developer
             </h3>
             <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
-              Hey, thanks for stopping by. I&apos;m a developer and techno artist out of Houston, TX 
+              Hey, thanks for stopping by. I&apos;m a developer and artist out of Houston, TX 
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
