@@ -21,7 +21,7 @@ import {
 } from "react-icons/fa";
 
 const socialIcons = [
-  { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "Github" },
+  { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "GitHub" },
   { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/", title: "Linkedin" },
   { icon: FaDiscord, link: "https://discord.com/users/216339214978121728", title: "Discord"},
   { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu", title: "Soundcloud" }
