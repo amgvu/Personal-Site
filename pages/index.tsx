@@ -27,7 +27,7 @@ const socialIcons = [
   { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu", title: "Soundcloud" }
 ];
 
-const resumePdfPath = 'RESUMENovember2024v2.pdf';
+const resumePdfPath = 'KevinVu-Resume.pdf';
 
 export default function Home() {
 
