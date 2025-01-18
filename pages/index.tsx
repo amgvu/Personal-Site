@@ -153,7 +153,7 @@ export default function Home() {
         </section>
         <div className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4">
         <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-white">Projects</h2>
-        <p className="text-center text-xl text-white font-light space-y-1">These are some of the projects I've built and contributed to. Click on a card to learn more.</p>
+        <p className="text-center text-xl text-white font-light space-y-1">These are some of the projects I&apos;ve built and contributed to. Click on a card to learn more.</p>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
