@@ -20,6 +20,8 @@ import {
   FaPlay
 } from "react-icons/fa";
 
+import ProjectCard from '../components/ProjectCard';
+
 const socialIcons = [
   { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "GitHub" },
   { icon: AiFillLinkedin, link: "https://www.linkedin.com/in/kevin-vu-a8764b252/", title: "Linkedin" },
@@ -128,6 +130,11 @@ const handleScrollDown = (): void => {
         </button>
         </div>
         </section>
+        <section className="flex flex-col items-center space-y-4 py-10">
+          <ProjectCard title="Project 1" description="Description of project 1" link="https://github.com/amgvu/ShopSentry" />
+          <ProjectCard title="Project 2" description="Description of project 2" link="https://github.com/amgvu/Worble" />
+          <ProjectCard title="Project 3" description="Description of project 3" link="https://github.com/amgvu/Personal-Site" />
+        </section>
         <section className="font-sans text-center">
           <div>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200">
@@ -145,4 +152,3 @@ const handleScrollDown = (): void => {
     </div>
   );
 }
-
