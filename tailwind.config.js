@@ -31,7 +31,7 @@ module.exports = {
         'text':'text 15s ease infinite',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'] // Include Noto Sans as the primary sans-serif font
+        geist: ['Geist Mono', 'monospace'],
       },
     },
   },

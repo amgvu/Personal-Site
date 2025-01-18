@@ -6,7 +6,6 @@ import RadioComponent from "../components/RadioComponent";
 import ThreeAnimation from "../components/ThreeAnimation";
 import EmailForm from "../components/EmailForm";
 import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { 
   AiFillLinkedin, 
   AiFillYoutube, 
@@ -60,16 +59,13 @@ export default function Home() {
      <Head>
         <title>Kevin Vu | Portfolio</title>
         <link rel="icon" href="/favicon/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
       <main className="bg-[#000000] px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             <RadioComponent text="Now on air: Human Safari - Jazz Affair" url="https://soundcloud.com/r-srecords/human-safari-jazz-affair-rs2309-clip"/>
           </div>
-          <nav className="mb-12 font-sans flex justify-end py-10 text-gray-200">
+          <nav className="mb-12 flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
             <ul className="flex items-center">
               <li>
@@ -104,7 +100,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="relative font-sans bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
+          <div className="relative bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
             <div className="absolute top-7 left-1 duration-300 animate__fadeIn
               animate__delay-2s animate__animated visible sm:invisible">
               <ThreeAnimationMobile />
@@ -134,7 +130,7 @@ export default function Home() {
           <div className="my-3 text-white grid grid-cols-1 justify-center">
             {isProjectsVisible && (
               <h3
-                className={`font-sans text-center pb-2 text-2xl transition-opacity duration-1000 animate__fadeIn
+                className={`text-center pb-2 text-2xl transition-opacity duration-1000 animate__fadeIn
                 animate__delay-4s animate__animated ${
                   isFadingOut ? 'opacity-0' : 'opacity-100'
                 }`}
@@ -157,13 +153,13 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
-          <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Efficiently manage and store nicknames, generate themes." link="https://github.com/amgvu/ArcForge" />
+          <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Manage and store nicknames" link="https://github.com/amgvu/ArcForge" />
           <ProjectCard title="HawkHacks/Landing" description="The front page of HawkHacks 2024" link="https://hawkhacks.ca/" />
           <ProjectCard title="HawkHacks/Dashboard" description="The application dashboard for hackers and mentors" link="https://portal.hawkhacks.ca/login?from=/" />
-          <ProjectCard title="Personal Site" description="Like the site? You can find the code here as well as setup instructions!" link="https://github.com/amgvu/Personal-Site" />
+          <ProjectCard title="Personal Site" description="Like the site? You can find the code here as well as setup instructions" link="https://github.com/amgvu/Personal-Site" />
         </section>
         </div>
-        <section className="font-sans text-center">
+        <section className="text-center">
           <div>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200">
             </p>
