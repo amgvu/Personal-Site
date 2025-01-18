@@ -134,7 +134,7 @@ export default function Home() {
           <div className="my-3 text-white grid grid-cols-1 justify-center">
             {isProjectsVisible && (
               <h3
-                className={`font-sans text-center text-2xl transition-opacity duration-1000 animate__fadeIn
+                className={`font-sans text-center pb-2 text-2xl transition-opacity duration-1000 animate__fadeIn
                 animate__delay-4s animate__animated ${
                   isFadingOut ? 'opacity-0' : 'opacity-100'
                 }`}
@@ -152,10 +152,12 @@ export default function Home() {
           </div>
         </section>
         <div className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4">
+        <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-white">Projects</h2>
+        <p className="text-center text-xl text-white font-light space-y-1">These are some of the projects I've built and contributed to. Click on a card to learn more.</p>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
-          <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Efficiently manage and store nicknames, generate themes, etc." link="https://github.com/amgvu/ArcForge" />
+          <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Efficiently manage and store nicknames, generate themes." link="https://github.com/amgvu/ArcForge" />
           <ProjectCard title="HawkHacks/Landing" description="The front page of HawkHacks 2024" link="https://hawkhacks.ca/" />
           <ProjectCard title="HawkHacks/Dashboard" description="The application dashboard for hackers and mentors" link="https://portal.hawkhacks.ca/login?from=/" />
           <ProjectCard title="Personal Site" description="Like the site? You can find the code here as well as setup instructions!" link="https://github.com/amgvu/Personal-Site" />
@@ -167,9 +169,9 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className="py-10">
+        <section>
           <div>
-            <h3 className="py-1 text-sm dark:text-white animate__fadeIn animate__delay-1s animate__animated">
+            <h3 className="text-sm dark:text-white animate__fadeIn animate__delay-1s animate__animated">
               <EmailForm />
             </h3>
           </div>
