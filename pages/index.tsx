@@ -135,7 +135,7 @@ export default function Home() {
             {isProjectsVisible && (
               <h3
                 className={`font-sans text-center text-2xl transition-opacity duration-1000 animate__fadeIn
-                animate__delay-3s animate__animated ${
+                animate__delay-4s animate__animated ${
                   isFadingOut ? 'opacity-0' : 'opacity-100'
                 }`}
               >
