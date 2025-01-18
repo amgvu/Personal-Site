@@ -130,10 +130,13 @@ const handleScrollDown = (): void => {
         </button>
         </div>
         </section>
-        <section className="flex flex-col items-center space-y-4 py-10">
-          <ProjectCard title="Project 1" description="Description of project 1" link="https://github.com/amgvu/ShopSentry" />
-          <ProjectCard title="Project 2" description="Description of project 2" link="https://github.com/amgvu/Worble" />
-          <ProjectCard title="Project 3" description="Description of project 3" link="https://github.com/amgvu/Personal-Site" />
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+          <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
+          <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
+          <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Efficiently manage and store nicknames, generate themes, etc." link="https://github.com/amgvu/ArcForge" /> {/* Add landing here */}
+          <ProjectCard title="HawkHacks/Landing" description="The front page of HawkHacks 2024" link="https://hawkhacks.ca/" />
+          <ProjectCard title="HawkHacks/Dashboard" description="The application dashboard for hackers and mentors" link="https://portal.hawkhacks.ca/login?from=/" />
+          <ProjectCard title="Personal Site" description="Like the site? You can find the code here as well as setup instructions!" link="https://github.com/amgvu/Personal-Site" />
         </section>
         <section className="font-sans text-center">
           <div>
