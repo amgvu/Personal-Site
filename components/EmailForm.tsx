@@ -42,18 +42,18 @@ const EmailForm: React.FC = () => {
   return (
     <div className="max-w-md mx-auto">
       <div className="space-y-1 py-4">
-        <h1 className="font-semibold text-center text-3xl">Wanna send a message?</h1>
-        <h2 className="font-light text-center text-xl">Drop one below and I&apos;ll respond as soon as I can.</h2>
+        <h1 className="font-semibold text-gray-200 text-center text-3xl">Wanna send a message?</h1>
+        <h2 className="font-light text-gray-300 text-center text-xl">Drop one below and I&apos;ll respond as soon as I can.</h2>
       </div>
       <form onSubmit={handleSubmit} className="bg-transparent rounded-xl pt-6 pb-8 mb-4">
         <input type="hidden" name="access_key" value="96e4193d-f096-4980-8582-19d27b3eb24d" />
 
         <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+          <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="name">
             Name
           </label>
           <input
-            className="border border-zinc-800 rounded w-full py-2 px-3 text-white bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
+            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             name="name"
             type="name"
@@ -63,11 +63,11 @@ const EmailForm: React.FC = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
+          <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
           <input
-            className="border border-zinc-800 rounded w-full py-2 px-3 text-white bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
+            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
             type="email"
@@ -77,11 +77,11 @@ const EmailForm: React.FC = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
+          <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="message">
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-white leading-tight focus:outline-none focus:shadow-outline resize-none"
+            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-gray-200 leading-tight focus:outline-none focus:shadow-outline resize-none"
             id="message"
             name="message"
             placeholder="Enter your message"

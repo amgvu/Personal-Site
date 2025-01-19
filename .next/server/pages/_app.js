@@ -1,1 +1,5 @@
-(()=>{var e={};e.id=636,e.ids=[636],e.modules={3842:e=>{e.exports={style:{fontFamily:"'GeistMono', ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace"},className:"__className_c1e5c9",variable:"__variable_c1e5c9"}},8662:(e,r,s)=>{"use strict";s.r(r),s.d(r,{default:()=>u});var a=s(8732);s(2880);var o=s(2015);let t=require("react-spinners/RotateLoader");var i=s.n(t);let n=()=>(0,a.jsx)("div",{className:"bg-black flex justify-center items-center h-screen",children:(0,a.jsx)(i(),{color:"#ffffff",size:20,loading:!0})});var c=s(3842),l=s.n(c);function u({Component:e,pageProps:r}){let[s,t]=(0,o.useState)(!0);return(0,a.jsx)("main",{className:l().className,children:s?(0,a.jsx)(n,{}):(0,a.jsx)(e,{...r})})}},2880:()=>{},2015:e=>{"use strict";e.exports=require("react")},8732:e=>{"use strict";e.exports=require("react/jsx-runtime")}};var r=require("../webpack-runtime.js");r.C(e);var s=r(r.s=8662);module.exports=s})();
+const CHUNK_PUBLIC_PATH = "server/pages/_app.js";
+const runtime = require("../chunks/ssr/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__f8c72a._.js");
+runtime.loadChunk("server/chunks/ssr/_673a39._.css");
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/pages/_app.tsx [ssr] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

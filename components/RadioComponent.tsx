@@ -31,9 +31,9 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
                    }}>
         <div style={{ marginLeft: "20px" }} className="cursor-pointer" onClick={handlePlayPause}>
           {isPlaying ? (
-            <FaPause style={{ color: "#FFFFFF", fontSize: "24px" }} />
+            <FaPause style={{ color: "#f3f4f6", fontSize: "24px" }} />
           ) : (
-            <FaPlay style={{ color: "#FFFFFF", fontSize: "24px" }} />
+            <FaPlay style={{ color: "#f3f4f6", fontSize: "24px" }} />
           )}
         </div>
       </div>
@@ -41,7 +41,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       <motion.div
         style={{
           whiteSpace: "nowrap",
-          color: "#fff",
+          color: "#d1d5db",
         }}
         animate={{
           x: ["103%", "-103%"],
@@ -56,7 +56,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       </motion.div>
       </div>
       </div>
-      <div className="absolute top-[43px] font-sans overflow-hidden transform bg-transparent p-2 rounded-xl flex items-center">
+      <div className="absolute top-[43px] overflow-hidden transform bg-transparent p-2 rounded-xl flex items-center">
       </div>
 
       {isPlaying && (

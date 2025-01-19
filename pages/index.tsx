@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import RadioComponent from "../components/RadioComponent";
-import ThreeAnimation from "../components/ThreeAnimation";
 import EmailForm from "../components/EmailForm";
-import ThreeAnimationMobile from "../components/ThreeAnimationMobile";
+import AmbientBackground from "../components/AmbientBackground";
 import { 
   AiFillLinkedin, 
   AiFillYoutube, 
@@ -60,8 +59,9 @@ export default function Home() {
         <title>Kevin Vu | Portfolio</title>
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
-      <main className="bg-[#000000] px-4 md:px-8 lg:px-16 xl:px-32">
+      <main className="px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
+          <AmbientBackground />
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             <RadioComponent text="Now on air: Human Safari - Jazz Affair" url="https://soundcloud.com/r-srecords/human-safari-jazz-affair-rs2309-clip"/>
           </div>
@@ -103,31 +103,29 @@ export default function Home() {
           <div className="relative bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
             <div className="absolute top-7 left-1 duration-300 animate__fadeIn
               animate__delay-2s animate__animated visible sm:invisible">
-              <ThreeAnimationMobile />
             </div>
             <div className="absolute right-2 top-[-90px] bottom-10 flex justify-center items-center h-screen w-full" style={{ zIndex: 0, pointerEvents: 'none' }}>
               <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated invisible sm:visible">
-                <ThreeAnimation />
               </div>
             </div>
-            <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-100 md:text-9xl">
+            <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-200 md:text-9xl">
               Kevin Vu
             </h2>
             <h3 className="py-2 text-2xl font-medium text-[#8A8A8A] animate__fadeIn animate__delay animate__animated md:text-5xl">
               Full Stack Developer
             </h3>
-            <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-200 md:text-xl">
+            <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
               Hey, thanks for stopping by. I&apos;m a developer and artist out of Houston, TX 
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
-                <button key={index} className="delay-10 flex-row gap-16 bg-transparent p-2 sm:p-3 py-3 text-5xl text-white transition duration-100 ease-in-out hover:-translate-y-1" onClick={() => window.open(item.link)}>
+                <button key={index} className="delay-10 flex-row gap-16 bg-transparent p-2 sm:p-3 py-3 text-5xl text-gray-100 transition duration-100 ease-in-out hover:-translate-y-1" onClick={() => window.open(item.link)}>
                   <item.icon />
                 </button>
               ))}
             </div>
           </div>
-          <div className="my-3 text-white grid grid-cols-1 justify-center">
+          <div className="my-3 text-gray-200 grid grid-cols-1 justify-center">
             {isProjectsVisible && (
               <h3
                 className={`text-center pb-2 text-2xl transition-opacity duration-1000 animate__fadeIn
@@ -148,8 +146,8 @@ export default function Home() {
           </div>
         </section>
         <div className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4">
-        <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-white">Projects</h2>
-        <p className="text-center text-xl text-white font-light space-y-1">These are some of the projects I&apos;ve built and contributed to. Click on a card to learn more.</p>
+        <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-gray-200">Projects</h2>
+        <p className="text-center text-xl text-gray-300 font-light space-y-1">These are some of the projects I&apos;ve built and contributed to. Click on a card to learn more.</p>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
