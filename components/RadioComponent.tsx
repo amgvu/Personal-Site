@@ -9,61 +9,6 @@ interface RadioComponentProps {
   url: string;
 }
 
-const Slider = styled.input`
-  &::-webkit-slider-thumb {
-    width: 12px;
-    height: 12px;
-    background: #09090b;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -5px;
-    box-shadow: 0 0 0 0.3px white;
-  }
-
-  &::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    background: #09090b;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 0 0.3px white;
-  }
-
-  &::-ms-thumb {
-    width: 12px;
-    height: 12px;
-    background: #09090b;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 0 0.3px white;
-  }
-
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    background: #18181b;
-    border-radius: 2px;
-    box-shadow: 0 0 0 0.2px white;
-  }
-
-  &::-moz-range-track {
-    width: 100%;
-    height: 4px;
-    background: #18181b;
-    border-radius: 2px;
-    box-shadow: 0 0 0 0.2px white;
-  }
-
-  &::-ms-track {
-    width: 100%;
-    height: 4px;
-    background: #18181b;
-    border-radius: 2px;
-    box-shadow: 0 0 0 0.2px white;
-  }
-`;
-
 const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
@@ -154,28 +99,6 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
           playedSeconds={playbackPosition}
         />
       )}
-
-      <AnimatePresence>
-        {isPlaying ? (
-          <motion.div
-            className="absolute top-full mt-7 left-2 flex items-center justify-center"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Slider
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-            />
-          </motion.div>
-        ) : null}
-        </AnimatePresence>
-
     </div>
   );
 };
