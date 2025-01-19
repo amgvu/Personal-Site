@@ -156,7 +156,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       )}
 
       <AnimatePresence>
-        {isPlaying && (
+        {isPlaying ? (
           <motion.div
             className="absolute top-full mt-7 left-2 flex items-center justify-center"
             initial={{ opacity: 0, y: -10 }}
@@ -171,16 +171,11 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
               step="0.01"
               value={volume}
               onChange={handleVolumeChange}
-              className="w-[15rem] h-1 rounded-lg appearance-none"
-              style={{
-                background: `linear-gradient(to right, ${volume * 100}% ${
-                  volume * 100
-                }%)`,
-              }}
             />
           </motion.div>
-        )}
-      </AnimatePresence>
+        ) : null}
+        </AnimatePresence>
+
     </div>
   );
 };
