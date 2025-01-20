@@ -28,7 +28,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 
   return (
     <div className="relative">
-      <div className="absolute top-[43px] transform bg-white bg-opacity-[.04] p-2 rounded-xl border border-zinc-700 flex items-center">
+      <div className="absolute top-[43px] transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700 flex items-center">
         <div
           style={{
             position: "absolute",

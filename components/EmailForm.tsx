@@ -53,7 +53,7 @@ const EmailForm: React.FC = () => {
             Name
           </label>
           <input
-            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
+            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-white/5 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             name="name"
             type="name"
@@ -67,7 +67,7 @@ const EmailForm: React.FC = () => {
             Email
           </label>
           <input
-            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-neutral-900 leading-tight focus:outline-none focus:shadow-outline"
+            className="border border-zinc-800 rounded w-full py-2 px-3 text-gray-200 bg-white/5 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
             type="email"
@@ -81,7 +81,7 @@ const EmailForm: React.FC = () => {
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-neutral-900 text-gray-200 leading-tight focus:outline-none focus:shadow-outline resize-none"
+            className="shadow appearance-none border rounded w-full py-2 px-3 border-zinc-800 bg-white/5 text-gray-200 leading-tight focus:outline-none focus:shadow-outline resize-none"
             id="message"
             name="message"
             placeholder="Enter your message"

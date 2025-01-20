@@ -59,7 +59,7 @@ const AmbientBackground = () => {
         <motion.div
           className="absolute w-72 h-72 rounded-full bg-pink-500/20"
           animate={{
-            scale: [3, 3.12, 3],
+            scale: [4, 4.12, 4],
             opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
@@ -70,7 +70,7 @@ const AmbientBackground = () => {
           }}
           style={{
             left: "45%",
-            bottom: "20%",
+            bottom: "40%",
             filter: "url(#glow)",
           }}
         />
@@ -89,12 +89,12 @@ const AmbientBackground = () => {
                   [236, 72, 153],  
                 ][i]
               }, 0.25)`,
-              left: `${26 + i * 43}%`,
-              top: `${20 + i * 15}%`,
+              left: `${66 + i * 43}%`,
+              top: `${30 + i * 15}%`,
               filter: "url(#glow)",
             }}
             animate={{
-              scale: [3, 3.15, 3],
+              scale: [4, 4.15, 4],
               opacity: [0.25, 0.35, 0.25],
             }}
             transition={{
@@ -119,12 +119,12 @@ const AmbientBackground = () => {
                   [244, 114, 182],
                 ][i]
               }, 0.3)`,
-              right: `${28 + i * 15}%`,
-              bottom: `${40 + i * 10}%`,
+              right: `${31 + i * 11}%`,
+              bottom: `${33 + i * 13}%`,
               filter: "url(#glow)",
             }}
             animate={{
-              scale: [3, 3.2, 3],
+              scale: [4, 4.2, 4],
               opacity: [0.3, 0.4, 0.3],
             }}
             transition={{

@@ -111,8 +111,8 @@ export default function Home() {
             <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-200 md:text-9xl">
               Kevin Vu
             </h2>
-            <h3 className="py-2 text-2xl font-medium text-[#8A8A8A] animate__fadeIn animate__delay animate__animated md:text-5xl">
-              Full Stack Developer
+            <h3 className="py-2 text-2xl font-medium text-gray-300 animate__fadeIn animate__delay animate__animated md:text-5xl">
+              Software Developer
             </h3>
             <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
               Hey, thanks for stopping by. I&apos;m a developer and artist out of Houston, TX 
