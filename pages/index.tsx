@@ -62,6 +62,7 @@ export default function Home() {
       <main className="px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
+            <AmbientBackground />
             <RadioComponent text="Now on air: Maan - Jackin'" url="https://soundcloud.com/maan98905/jackin"/>
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">

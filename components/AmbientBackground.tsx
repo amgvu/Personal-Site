@@ -9,7 +9,7 @@ const AmbientBackground = () => {
       <svg className="w-0 h-0">
         <defs>
           <filter id="glow">
-            <feGaussianBlur stdDeviation="20" result="coloredBlur" />
+            <feGaussianBlur stdDeviation="40" result="coloredBlur" />
             <feMerge>
               <feMergeNode in="coloredBlur" />
               <feMergeNode in="SourceGraphic" />
@@ -20,9 +20,9 @@ const AmbientBackground = () => {
 
       <div className="absolute inset-0">
         <motion.div
-          className="absolute w-96 h-96 rounded-full bg-purple-500/30"
+          className="absolute w-96 h-96 rounded-full bg-slate-500/30"
           animate={{
-            scale: [2, 2.1, 2],
+            scale: [2, 2.2, 2],
             opacity: [0.3, 0.4, 0.3],
           }}
           transition={{
@@ -31,16 +31,16 @@ const AmbientBackground = () => {
             ease: "easeInOut",
           }}
           style={{
-            left: "30%",
+            left: "40%",
             top: "40%",
             filter: "url(#glow)",
           }}
         />
 
         <motion.div
-          className="absolute w-80 h-80 rounded-full bg-fuchsia-400/25"
+          className="absolute w-80 h-80 rounded-full bg-slate-400/25"
           animate={{
-            scale: [3, 3.15, 3],
+            scale: [3, 1.35, 3],
             opacity: [0.25, 0.35, 0.25],
           }}
           transition={{
@@ -57,9 +57,9 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-72 h-72 rounded-full bg-pink-500/20"
+          className="absolute w-72 h-72 rounded-full bg-slate-500/20"
           animate={{
-            scale: [4, 4.12, 4],
+            scale: [4, 1.33, 4],
             opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
@@ -69,7 +69,7 @@ const AmbientBackground = () => {
             delay: beatDuration * 2,
           }}
           style={{
-            left: "45%",
+            left: "35%",
             bottom: "40%",
             filter: "url(#glow)",
           }}
@@ -82,11 +82,11 @@ const AmbientBackground = () => {
             style={{
               background: `rgba(${
                 [
-                  [216, 180, 254], 
-                  [192, 132, 252], 
-                  [168, 85, 247],  
-                  [217, 70, 239], 
-                  [236, 72, 153],  
+                  [255, 255, 255], 
+                  [255, 255, 255], 
+                  [255, 255, 255],  
+                  [255, 255, 255], 
+                  [255, 255, 255],  
                 ][i]
               }, 0.25)`,
               left: `${66 + i * 43}%`,
@@ -94,7 +94,7 @@ const AmbientBackground = () => {
               filter: "url(#glow)",
             }}
             animate={{
-              scale: [4, 4.15, 4],
+              scale: [4, 4.75, 4],
               opacity: [0.25, 0.35, 0.25],
             }}
             transition={{
@@ -113,10 +113,10 @@ const AmbientBackground = () => {
             style={{
               background: `rgba(${
                 [
-                  [233, 213, 255],
-                  [216, 180, 254],
-                  [249, 168, 212],
-                  [244, 114, 182],
+                  [255, 255, 255],
+                  [255, 255, 255],
+                  [255, 255, 255],
+                  [255, 255, 255],
                 ][i]
               }, 0.3)`,
               right: `${31 + i * 11}%`,
@@ -124,7 +124,7 @@ const AmbientBackground = () => {
               filter: "url(#glow)",
             }}
             animate={{
-              scale: [4, 4.2, 4],
+              scale: [4, 4.9, 4],
               opacity: [0.3, 0.4, 0.3],
             }}
             transition={{
