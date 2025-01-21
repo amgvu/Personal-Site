@@ -20,7 +20,7 @@ const AmbientBackground = () => {
 
       <div className="absolute inset-0">
         <motion.div
-          className="absolute w-96 h-96 rounded-full bg-slate-700/30"
+          className="absolute w-96 h-96 rounded-full bg-slate-700/50"
           animate={{
             scale: [2, 2.2, 2],
             opacity: [0.3, 0.4, 0.3],
@@ -31,7 +31,7 @@ const AmbientBackground = () => {
             ease: "easeInOut",
           }}
           style={{
-            left: "40%",
+            left: "37%",
             top: "40%",
             filter: "url(#glow)",
           }}
@@ -82,13 +82,13 @@ const AmbientBackground = () => {
             style={{
               background: `rgba(${
                 [
-                  [148, 163, 184], 
+                  [51, 65, 85], 
                   [100, 116, 139], 
                   [255, 255, 255],  
                   [100, 116, 139], 
                   [100, 116, 139],  
                 ][i]
-              }, 0.25)`,
+              }, 0.95)`,
               left: `${66 + i * 43}%`,
               top: `${30 + i * 15}%`,
               filter: "url(#glow)",
@@ -98,7 +98,7 @@ const AmbientBackground = () => {
               opacity: [0.25, 0.35, 0.25],
             }}
             transition={{
-              duration: beatDuration * (0.01 + i * 0.5),
+              duration: beatDuration * (2 + i * 0.5),
               repeat: Infinity,
               ease: "easeInOut",
               delay: beatDuration * i * 0.3,
@@ -118,8 +118,8 @@ const AmbientBackground = () => {
                   [148, 163, 184],
                   [100, 116, 139],
                 ][i]
-              }, 0.9)`,
-              right: `${31 + i * 11}%`,
+              }, 0.7)`,
+              right: `${39 + i * 7}%`,
               bottom: `${33 + i * 13}%`,
               filter: "url(#glow)",
             }}
@@ -128,7 +128,7 @@ const AmbientBackground = () => {
               opacity: [0.3, 0.4, 0.3],
             }}
             transition={{
-              duration: beatDuration * (0.01 + i * 0.3),
+              duration: beatDuration * (1.5 + i * 0.3),
               repeat: Infinity,
               ease: "easeInOut",
               delay: beatDuration * i * 0.4,
