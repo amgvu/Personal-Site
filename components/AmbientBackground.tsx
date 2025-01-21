@@ -5,16 +5,9 @@ const AmbientBackground = () => {
   const beatDuration = 60 / 140;
 
   return (
-    <div className="fixed inset-0 overflow-hidden animate__fadeIn animate__delay-2s animate__animated blur-3xl" style={{ zIndex: -1 }}>
+    <div className="fixed inset-0 overflow-hidden animate__fadeIn animate__delay-0.5s animate__animated blur-3xl" style={{ zIndex: -1 }}>
       <svg className="w-0 h-0">
         <defs>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="80" result="coloredBlur" />
-            <feMerge>
-              <feMergeNode in="coloredBlur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
         </defs>
       </svg>
 
@@ -38,9 +31,9 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-80 h-80 rounded-full bg-slate-400/25"
+          className="absolute w-160 h-160 rounded-full bg-slate-500/50" 
           animate={{
-            scale: [3, 2.35, 3],
+            scale: [6, 4.7, 6],
             opacity: [0.25, 0.35, 0.25],
           }}
           transition={{
@@ -57,9 +50,9 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-72 h-72 rounded-full bg-slate-500/20"
+          className="absolute w-144 h-144 rounded-full bg-slate-500/20"
           animate={{
-            scale: [4, 3.33, 4],
+            scale: [8, 6.66, 8], 
             opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
@@ -78,23 +71,22 @@ const AmbientBackground = () => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-40 h-40 rounded-full"
+            className="absolute w-80 h-80 rounded-full"
             style={{
               background: `rgba(${
                 [
                   [51, 65, 85], 
-                  [100, 116, 139], 
-                  [255, 255, 255],  
-                  [100, 116, 139], 
-                  [100, 116, 139],  
+                  [71, 85, 105], 
+                  [51, 65, 85],  
+                  [15, 23, 42], 
+                  [15, 23, 42],  
                 ][i]
-              }, 0.95)`,
-              left: `${66 + i * 43}%`,
+              }, 0.85)`,
+              left: `${18 + i * 63}%`,
               top: `${30 + i * 15}%`,
-              filter: "url(#glow)",
             }}
             animate={{
-              scale: [4, 4.35, 4],
+              scale: [8, 8.7, 8],
               opacity: [0.25, 0.35, 0.25],
             }}
             transition={{
@@ -118,13 +110,12 @@ const AmbientBackground = () => {
                   [148, 163, 184],
                   [100, 116, 139],
                 ][i]
-              }, 0.7)`,
+              }, 0.31)`,
               right: `${39 + i * 7}%`,
               bottom: `${33 + i * 13}%`,
-              filter: "url(#glow)",
             }}
             animate={{
-              scale: [4, 4.4, 4],
+              scale: [8, 7.4, 8],
               opacity: [0.3, 0.4, 0.3],
             }}
             transition={{

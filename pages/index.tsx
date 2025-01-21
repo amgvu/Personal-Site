@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import RadioComponent from "../components/RadioComponent";
 import EmailForm from "../components/EmailForm";
 import AmbientBackground from "../components/AmbientBackground";
+import VisualizerButton from "../components/VisualizerButton";
 import { 
   AiFillLinkedin, 
-  AiFillYoutube, 
   AiFillGithub 
 } from "react-icons/ai";
 import { SlArrowDown } from "react-icons/sl";
@@ -31,6 +31,7 @@ const resumePdfPath = 'KevinVu-Resume2.pdf';
 export default function Home() {
   const [isProjectsVisible, setIsProjectsVisible] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
 
   const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
@@ -62,8 +63,11 @@ export default function Home() {
       <main className="px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
-            <AmbientBackground />
-            <RadioComponent text="Now on air: Maan - Jackin'" url="https://soundcloud.com/maan98905/jackin"/>
+            {isBackgroundVisible && <AmbientBackground />}
+            <RadioComponent 
+              text="Now on air: MZR - Jard" 
+              url="https://soundcloud.com/mzrmusic/jard"
+            />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
             <h1 className="text-xl"></h1>
@@ -171,7 +175,12 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <div className="fixed bottom-0 right-0 z-50">
+        <VisualizerButton 
+          isVisible={isBackgroundVisible} 
+          onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)} 
+        />
+      </div>
     </div>
   );
 }
-

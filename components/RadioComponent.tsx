@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlay, FaPause } from "react-icons/fa";
 import ReactPlayer from "react-player";
-import styled from "styled-components";
+import MusicLoader from "./MusicLoading";
 
 interface RadioComponentProps {
   text: string;
@@ -11,15 +11,22 @@ interface RadioComponentProps {
 
 const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
-  const [volume, setVolume] = useState(0.1);
+  const [volume, setVolume] = useState(0.3);
 
   const handlePlayPause = () => {
+    if (!isPlaying) {
+      setIsLoading(true);
+    }
     setIsPlaying(!isPlaying);
   };
 
   const handleProgress = (progress: { playedSeconds: number }) => {
     setPlaybackPosition(progress.playedSeconds);
+    if (isLoading && progress.playedSeconds > 0) {
+      setIsLoading(false);
+    }
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,56 +35,44 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 
   return (
     <div className="relative">
-      <div className="absolute top-[43px] transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700 flex items-center">
-        <div
-          style={{
-            position: "absolute",
-            right: "-32px",
-            overflow: "visible",
-            top: "8px",
-          }}
-        >
-          <div
-            style={{ marginLeft: "20px" }}
-            className="cursor-pointer"
-            onClick={handlePlayPause}
-          >
+      <div className="fixed top-[43px] w-2/12 transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700">
+        {isLoading && isPlaying && <MusicLoader className="mt-12 left-52 fixed" />}
+        <div className="flex items-center">
+          <div className="absolute right-[-32px] overflow-visible top-[8px]">
+            <div className="cursor-pointer ml-5" onClick={handlePlayPause}>
+              <motion.div
+                key={isPlaying ? "pause" : "play"}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isPlaying ? (
+                  <FaPause className="text-gray-100 text-2xl" />
+                ) : (
+                  <FaPlay className="text-gray-100 text-2xl" />
+                )}
+              </motion.div>
+            </div>
+          </div>
+          
+          <div className="w-full overflow-hidden">
             <motion.div
-              key={isPlaying ? "pause" : "play"}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.3 }}
+              className="whitespace-nowrap text-gray-300"
+              animate={{
+                x: ["104%", "-48%"],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "linear",
+              }}
             >
-              {isPlaying ? (
-                <FaPause style={{ color: "#f3f4f6", fontSize: "24px" }} />
-              ) : (
-                <FaPlay style={{ color: "#f3f4f6", fontSize: "24px" }} />
-              )}
+              {text}
             </motion.div>
           </div>
         </div>
-        <div className="overflow-hidden">
-          <motion.div
-            style={{
-              whiteSpace: "nowrap",
-              color: "#d1d5db",
-            }}
-            animate={{
-              x: ["103%", "-103%"],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            {text}
-          </motion.div>
-        </div>
       </div>
-      <div className="absolute top-[43px] overflow-hidden transform bg-transparent p-2 rounded-xl flex items-center"></div>
-
       {isPlaying && (
         <ReactPlayer
           url={url}
@@ -104,4 +99,3 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 };
 
 export default RadioComponent;
-
