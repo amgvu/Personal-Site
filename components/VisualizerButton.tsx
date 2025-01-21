@@ -8,20 +8,26 @@ interface VisualizerButtonProps {
 
 const VisualizerButton: React.FC<VisualizerButtonProps> = ({ isVisible, onToggle }) => {
   return (
-    <div className="fixed bottom-9 right-12 flex items-end gap-4 z-50 animate__fadeIn animate__delay-1s animate__animated">
+    <div className="fixed bottom-9 right-20 flex items-end gap-4 z-50 animate__fadeIn animate__delay-1s animate__animated">
       <div className="flex mb-2 flex-col">
         <span className="text-white/80 text-sm">Enable Visualizer</span>
-        <span className="text-red-400 text-xs">Photosensitive Visuals</span>
+        <span className="text-red-400 text-xs">Photosensitive Caution</span>
       </div>
-      <button 
-        onClick={onToggle}
-        className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors duration-300 cursor-pointer"
-      >
-        {!isVisible ? 
-          <BsFillPlayFill className="w-6 h-6 text-white" /> : 
-          <BsPauseFill className="w-6 h-6 text-white" />
-        }
-      </button>
+      <div className="relative group">
+        <button 
+          onClick={onToggle}
+          className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+        >
+          {!isVisible ? 
+            <BsFillPlayFill className="w-6 h-6 text-white" /> : 
+            <BsPauseFill className="w-6 h-6 text-white" />
+          }
+        </button>
+        <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black/40 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Better with the music :)
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-black/80"></div>
+        </div>
+      </div>
     </div>
   );
 };

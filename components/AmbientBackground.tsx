@@ -81,13 +81,13 @@ const AmbientBackground = () => {
                   [15, 23, 42], 
                   [15, 23, 42],  
                 ][i]
-              }, 0.85)`,
+              }, 0.84)`,
               left: `${18 + i * 63}%`,
               top: `${30 + i * 15}%`,
             }}
             animate={{
-              scale: [8, 8.7, 8],
-              opacity: [0.25, 0.35, 0.25],
+              scale: [8, 8.9, 8],
+              opacity: [0.25, 0.38, 0.25],
             }}
             transition={{
               duration: beatDuration * (2 + i * 0.5),
@@ -110,13 +110,13 @@ const AmbientBackground = () => {
                   [148, 163, 184],
                   [100, 116, 139],
                 ][i]
-              }, 0.31)`,
-              right: `${39 + i * 7}%`,
+              }, 0.21)`,
+              right: `${39 + i * 11}%`,
               bottom: `${33 + i * 13}%`,
             }}
             animate={{
-              scale: [8, 7.4, 8],
-              opacity: [0.3, 0.4, 0.3],
+              scale: [8, 7.8, 8],
+              opacity: [0.3, 0.9, 0.3],
             }}
             transition={{
               duration: beatDuration * (1.5 + i * 0.3),
