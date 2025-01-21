@@ -36,7 +36,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   return (
     <div className="relative">
       <div className="fixed top-[43px] w-2/12 transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700">
-        {isLoading && isPlaying && <MusicLoader className="mt-12 left-52 fixed" />}
+        {isLoading && isPlaying && <MusicLoader className="mt-12 left-60 fixed" />}
         <div className="flex items-center">
           <div className="absolute right-[-32px] overflow-visible top-[8px]">
             <div className="cursor-pointer ml-5" onClick={handlePlayPause}>
