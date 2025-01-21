@@ -149,9 +149,9 @@ export default function Home() {
         <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-gray-200">Projects</h2>
         <p className="text-center text-xl text-gray-300 font-light space-y-1">These are some of the projects I&apos;ve built and contributed to. Click on a card to learn more.</p>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
-          <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="Worble" description="Discord Bot that does all things nicknames. Controllable through a dashboard (ArcForge)" link="https://github.com/amgvu/Worble" />
           <ProjectCard title="ArcForge" description="Dashboard complementary to Worble discord bot. Manage and store nicknames" link="https://github.com/amgvu/ArcForge" />
+          <ProjectCard title="ShopSentry" description="Python web scraper bot that checks if a product is in stock" link="https://github.com/amgvu/ShopSentry" />
           <ProjectCard title="HawkHacks/Landing" description="The front page of HawkHacks 2024" link="https://hawkhacks.ca/" />
           <ProjectCard title="HawkHacks/Dashboard" description="The application dashboard for hackers and mentors" link="https://portal.hawkhacks.ca/login?from=/" />
           <ProjectCard title="Personal Site" description="Like the site? You can find the code here as well as setup instructions" link="https://github.com/amgvu/Personal-Site" />
