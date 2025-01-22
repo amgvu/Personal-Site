@@ -87,7 +87,7 @@ const AmbientBackground = () => {
             }}
             animate={{
               scale: [8, 8.9, 8],
-              opacity: [0.25, 0.38, 0.25],
+              opacity: [0.25, 0.68, 0.25],
             }}
             transition={{
               duration: beatDuration * (2 + i * 0.5),
@@ -110,7 +110,7 @@ const AmbientBackground = () => {
                   [148, 163, 184],
                   [100, 116, 139],
                 ][i]
-              }, 0.21)`,
+              }, 0.27)`,
               right: `${39 + i * 11}%`,
               bottom: `${33 + i * 13}%`,
             }}
