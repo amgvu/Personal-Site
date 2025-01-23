@@ -119,7 +119,7 @@ const AmbientBackground = () => {
               opacity: [0.3, 0.9, 0.3],
             }}
             transition={{
-              duration: beatDuration * (1.5 + i * 0.3),
+              duration: beatDuration * (1.2 + i * 0.3),
               repeat: Infinity,
               ease: "easeInOut",
               delay: beatDuration * i * 0.4,

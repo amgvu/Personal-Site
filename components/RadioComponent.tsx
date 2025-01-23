@@ -13,7 +13,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
-  const [volume, setVolume] = useState(0.3);
+  const [volume, setVolume] = useState(0.5);
 
   const handlePlayPause = () => {
     if (!isPlaying) {
@@ -60,7 +60,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
             <motion.div
               className="whitespace-nowrap text-gray-300"
               animate={{
-                x: ["104%", "-67%"],
+                x: ["104%", "-104%"],
               }}
               transition={{
                 duration: 10,
