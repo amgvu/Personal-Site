@@ -175,7 +175,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <div className="fixed bottom-0 right-0 z-50">
+      <div className="fixed bottom-0 right-0 z-50 sm:visible">
         <VisualizerButton 
           isVisible={isBackgroundVisible} 
           onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)} 
