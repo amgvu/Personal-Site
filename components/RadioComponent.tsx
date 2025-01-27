@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { FaPlay, FaPause } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import MusicLoader from "./MusicLoading";
+import VolumeSlider from "./VolumeSlider";
 
 interface RadioComponentProps {
   text: string;
@@ -13,7 +14,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
-  const [volume, setVolume] = useState(0.5);
+  const [volume, setVolume] = useState(0.2);
 
   const handlePlayPause = () => {
     if (!isPlaying) {
@@ -35,7 +36,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 
   return (
     <div className="relative">
-      <div className="fixed top-[43px] w-2/12 transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700">
+      <div className="absolute top-[43px] w-2/12 transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700">
         {isLoading && isPlaying && <MusicLoader className="mt-12 left-60 fixed" />}
         <div className="flex items-center">
           <div className="absolute right-[-32px] overflow-visible top-[8px]">
@@ -55,7 +56,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
               </motion.div>
             </div>
           </div>
-          
+
           <div className="w-full overflow-hidden">
             <motion.div
               className="whitespace-nowrap text-gray-300"
@@ -73,6 +74,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
           </div>
         </div>
       </div>
+
       {isPlaying && (
         <ReactPlayer
           url={url}
@@ -93,6 +95,10 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
           playbackRate={1}
           playedSeconds={playbackPosition}
         />
+      )}
+
+      {isPlaying && (
+        <VolumeSlider volume={volume} onVolumeChange={handleVolumeChange} />
       )}
     </div>
   );

@@ -6,6 +6,7 @@ import RadioComponent from "../components/RadioComponent";
 import EmailForm from "../components/EmailForm";
 import AmbientBackground from "../components/AmbientBackground";
 import VisualizerButton from "../components/VisualizerButton";
+import VolumeSlider from "../components/VolumeSlider";
 import { 
   AiFillLinkedin, 
   AiFillGithub 
@@ -65,8 +66,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent 
-              text="Now on air: Pink Noise 028 - Raas Live Set" 
-              url="https://youtu.be/uvYbYRr_VDA?si=dMgXG4iJF-2aHq8E&t=232"
+              text="Now on air: Psyk - Intern" 
+              url="https://www.youtube.com/watch?v=WDo9t1ohhqs"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
@@ -175,7 +176,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <div className="fixed bottom-0 right-0 z-50 sm:visible">
+      <div className="fixed bottom-0 right-0 z-50 invisible sm:visible">
         <VisualizerButton 
           isVisible={isBackgroundVisible} 
           onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)} 
