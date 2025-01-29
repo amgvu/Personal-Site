@@ -1,42 +1,31 @@
 {
   "pages": {
     "/_app": [
-      "static/chunks/node_modules_next_dist_f1b02b._.js",
-      "static/chunks/node_modules_react_1cad9b._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
-      "static/chunks/node_modules_react-dom_f14d04._.js",
-      "static/chunks/node_modules_83604b._.js",
+      "static/chunks/e7293_next_dist_bc747c._.js",
+      "static/chunks/34e2e_react_bd4f5c._.js",
+      "static/chunks/154a1_react-dom_cjs_react-dom_development_83ef4e.js",
+      "static/chunks/154a1_react-dom_06de9a._.js",
+      "static/chunks/node_modules__pnpm_46f156._.js",
       "static/chunks/[root of the server]__2adeb7._.js",
-      "static/chunks/_2b2703._.css",
+      "static/chunks/_fc5cdd._.css",
       "static/chunks/pages__app_5771e1._.js",
-      "static/chunks/pages__app_a6ff60._.js"
+      "static/chunks/pages__app_20f40f._.js"
     ],
     "/": [
-      "static/chunks/node_modules_next_b9a53c._.js",
-      "static/chunks/node_modules_react_1cad9b._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
-      "static/chunks/node_modules_react-dom_f14d04._.js",
-      "static/chunks/node_modules_framer-motion_dist_es_a0d43f._.js",
-      "static/chunks/node_modules_react-icons_fa_index_esm_ef5a7c.js",
-      "static/chunks/node_modules_react-icons_bs_index_esm_cb72d8.js",
-      "static/chunks/node_modules_react-icons_ai_index_esm_84fefc.js",
-      "static/chunks/node_modules_react-icons_sl_index_esm_809ace.js",
-      "static/chunks/node_modules_react-icons_lib_esm_2d023d._.js",
-      "static/chunks/node_modules_e4f852._.js",
       "static/chunks/[root of the server]__b25ca4._.js",
-      "static/chunks/node_modules_react-player_lib_c4ad2a._.js",
+      "static/chunks/e7293_next_baa563._.js",
+      "static/chunks/34e2e_react_bd4f5c._.js",
+      "static/chunks/154a1_react-dom_cjs_react-dom_development_83ef4e.js",
+      "static/chunks/154a1_react-dom_06de9a._.js",
+      "static/chunks/5cd48_framer-motion_dist_es_11a99b._.js",
+      "static/chunks/dbc12_react-icons_fa_index_esm_ad629c.js",
+      "static/chunks/dbc12_react-icons_ai_index_esm_c7957a.js",
+      "static/chunks/dbc12_react-icons_sl_index_esm_10c976.js",
+      "static/chunks/dbc12_react-icons_lib_esm_0896e5._.js",
+      "static/chunks/node_modules_d25924._.js",
+      "static/chunks/3f6c5_react-player_lib_a5a90e._.js",
       "static/chunks/pages_index_5771e1._.js",
-      "static/chunks/pages_index_2f83f4._.js"
-    ],
-    "/_error": [
-      "static/chunks/[root of the server]__31723f._.js",
-      "static/chunks/node_modules_react_b2385d._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
-      "static/chunks/node_modules_react-dom_f14d04._.js",
-      "static/chunks/node_modules_69e050._.js",
-      "static/chunks/[root of the server]__2e1cf5._.js",
-      "static/chunks/pages__error_5771e1._.js",
-      "static/chunks/pages__error_3b2cb6._.js"
+      "static/chunks/pages_index_e7d724._.js"
     ]
   },
   "devFiles": [],

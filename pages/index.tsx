@@ -66,8 +66,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent 
-              text="Now on air: Psyk - Intern" 
-              url="https://www.youtube.com/watch?v=WDo9t1ohhqs"
+              text="Now on air: Unbalance - Fluid (Jonas Kopp Remix)" 
+              url="https://youtu.be/e_trn6NVPvM?si=cB6jujUAFi74fgJH"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
