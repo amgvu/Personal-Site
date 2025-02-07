@@ -30,29 +30,11 @@ const socialIcons = [
 const resumePdfPath = 'KevinVu-Resume6.pdf';
 
 export default function Home() {
-  const [isProjectsVisible, setIsProjectsVisible] = useState(true);
-  const [isFadingOut, setIsFadingOut] = useState(false);
+
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
 
   const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
-  };
-
-  const handleScrollDown = (): void => {
-    const secondSection = document.querySelector('section:nth-of-type(2)') as HTMLElement;
-    
-    if (secondSection) {
-      window.scrollTo({
-        top: secondSection.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-
-    setIsFadingOut(true);
-
-    setTimeout(() => {
-      setIsProjectsVisible(false);
-    }, 500);
   };
 
   return (
@@ -66,7 +48,7 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent 
-              text="Now on air: HUMAN SAFARI - CUT (CRAVO REMIX)" 
+              text="Now on air: Human Safari - Cut (CRAVO Remix)" 
               url="https://youtu.be/BhxglilyIug?si=yY0YQkq9A5BXcHs2&t=24"
             />
           </div>
@@ -120,7 +102,7 @@ export default function Home() {
               Software Developer
             </h3>
             <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
-              Hey, thanks for stopping by. I&apos;m a developer and artist out of Houston, TX 
+              Hello! 👋 thanks for stopping by, I&apos;m a full-stack developer based out of Houston, TX!
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
@@ -131,23 +113,6 @@ export default function Home() {
             </div>
           </div>
           <div className="my-3 text-gray-200 grid grid-cols-1 justify-center">
-            {isProjectsVisible && (
-              <h3
-                className={`text-center pb-2 text-2xl transition-opacity duration-1000 animate__fadeIn
-                animate__delay-4s animate__animated ${
-                  isFadingOut ? 'opacity-0' : 'opacity-100'
-                }`}
-              >
-                Projects & More
-              </h3>
-            )}
-            <button
-              className="text-4xl mx-auto text-white flex justify-center animate__fadeIn
-                animate__delay-3s animate__animated transition duration-200 ease-in-out hover:-translate-y-1"
-              onClick={handleScrollDown}
-            >
-              <SlArrowDown />
-            </button>
           </div>
         </section>
         <div className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4">
