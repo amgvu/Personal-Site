@@ -27,7 +27,7 @@ const socialIcons = [
   { icon: FaSoundcloud, link: "https://soundcloud.com/kevinvuu", title: "Soundcloud" }
 ];
 
-const resumePdfPath = 'KevinVu-Resume7.pdf';
+const resumePdfPath = 'KevinVu-Resume8.pdf';
 
 export default function Home() {
 
@@ -36,7 +36,6 @@ export default function Home() {
   const openResumePdf = () => {
     window.open(resumePdfPath, '_blank');
   };
-
   return (
     <div className="scrollbar-hide">
      <Head>
