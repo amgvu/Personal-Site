@@ -31,7 +31,7 @@ const socialIcons = [
   },
 ];
 
-const resumePdfPath = "KevinVu-ResumeFinal.pdf";
+const resumePdfPath = "KevinVu-Resume2025.pdf";
 
 export default function Home() {
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
