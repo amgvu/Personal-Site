@@ -1,14 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import RadioComponent from "../components/RadioComponent";
 import EmailForm from "../components/EmailForm";
 import AmbientBackground from "../components/AmbientBackground";
 import VisualizerButton from "../components/VisualizerButton";
-import VolumeSlider from "../components/VolumeSlider";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { SlArrowDown } from "react-icons/sl";
 import { FaSoundcloud, FaDiscord, FaNode, FaPlay } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 
