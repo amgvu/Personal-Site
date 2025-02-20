@@ -16,7 +16,7 @@ const socialIcons = [
   { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "GitHub" },
   {
     icon: AiFillLinkedin,
-    link: "https://www.linkedin.com/in/kevin-vu-a8764b252/",
+    link: "https://www.linkedin.com/in/kevinvu-dev/",
     title: "Linkedin",
   },
   {
