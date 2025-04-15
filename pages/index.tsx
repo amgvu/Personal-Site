@@ -47,8 +47,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
-              text="Now on air: Patrice Scott - RTS.FM.030911"
-              url="https://youtu.be/D03tXZV-vJc?si=1sNK4NCGlULlOsbM&t=2678"
+              text="Now on air: Ryan Elliot - Boiler Room Berlin"
+              url="https://youtu.be/9ukQXQypilc?si=e9QdDirI8yKQhR29&t=4117"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
@@ -106,8 +106,8 @@ export default function Home() {
               Software Developer
             </h3>
             <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
-              Hello! 👋 thanks for stopping by, I&apos;m a full-stack developer
-              based out of Houston, TX!
+              Hi! 👋 thanks for stopping by, I&apos;m a full-stack developer
+              based in Houston, TX. I love all things tech and I also DJ.
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (

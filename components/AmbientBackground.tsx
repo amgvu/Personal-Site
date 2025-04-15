@@ -5,10 +5,12 @@ const AmbientBackground = () => {
   const beatDuration = 60 / 140;
 
   return (
-    <div className="fixed inset-0 overflow-hidden animate__fadeIn animate__delay-0.5s animate__animated blur-3xl" style={{ zIndex: -1 }}>
+    <div
+      className="fixed inset-0 overflow-hidden animate__fadeIn animate__delay-0.5s animate__animated blur-3xl"
+      style={{ zIndex: -1 }}
+    >
       <svg className="w-0 h-0">
-        <defs>
-        </defs>
+        <defs></defs>
       </svg>
 
       <div className="absolute inset-0">
@@ -31,7 +33,7 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-160 h-160 rounded-full bg-slate-500/50" 
+          className="absolute w-160 h-160 rounded-full bg-slate-500/50"
           animate={{
             scale: [6, 4.7, 6],
             opacity: [0.25, 0.35, 0.25],
@@ -52,7 +54,7 @@ const AmbientBackground = () => {
         <motion.div
           className="absolute w-144 h-144 rounded-full bg-slate-500/20"
           animate={{
-            scale: [8, 6.66, 8], 
+            scale: [8, 6.66, 8],
             opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
@@ -75,11 +77,11 @@ const AmbientBackground = () => {
             style={{
               background: `rgba(${
                 [
-                  [51, 65, 85], 
-                  [71, 85, 105], 
-                  [51, 65, 85],  
-                  [15, 23, 42], 
-                  [15, 23, 42],  
+                  [51, 65, 85],
+                  [71, 85, 105],
+                  [51, 65, 85],
+                  [15, 23, 42],
+                  [15, 23, 42],
                 ][i]
               }, 0.20)`,
               left: `${18 + i * 63}%`,
@@ -119,7 +121,7 @@ const AmbientBackground = () => {
               opacity: [0.3, 0.9, 0.3],
             }}
             transition={{
-              duration: beatDuration * (1.2 + i * 0.3),
+              duration: beatDuration * (1.9 + i * 0.3),
               repeat: Infinity,
               ease: "easeInOut",
               delay: beatDuration * i * 0.4,
