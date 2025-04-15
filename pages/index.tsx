@@ -47,8 +47,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
-              text="Now on air: Ryan Elliot - Boiler Room Berlin"
-              url="https://youtu.be/9ukQXQypilc?si=e9QdDirI8yKQhR29&t=4117"
+              text="Now on air: Moodymann - It's 2 Late 4 U And Me"
+              url="https://youtu.be/qpBybYez25I?si=Pf0q-YYKaCsFmPtc&t=144"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
@@ -128,19 +128,18 @@ export default function Home() {
             Projects
           </h2>
           <p className="text-center text-xl text-gray-300 font-light space-y-1">
-            These are some of the projects I&apos;ve built and contributed to.
-            Click on a card to learn more.
+            These are some of the projects I&apos;ve built and contributed to!
           </p>
           <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
             <ProjectCard
-              title="Worble"
-              description="Lightweight Discord backend service for ArcForge dashboard"
-              link="https://github.com/amgvu/Worble"
+              title="Arclify"
+              description="Discord nicknames and roles management application"
+              link="https://arclify.vercel.app/"
             />
             <ProjectCard
-              title="ArcForge"
-              description="Discord nicknames and roles management application"
-              link="https://github.com/amgvu/ArcForge"
+              title="Worble"
+              description="Lightweight Discord backend service for Arclify. Built with Discord.js"
+              link="https://github.com/amgvu/Worble"
             />
             <ProjectCard
               title="ShopSentry"
@@ -159,7 +158,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Personal Site"
-              description="Like the site? You can find the code here as well as setup instructions"
+              description="This website :D"
               link="https://github.com/amgvu/Personal-Site"
             />
           </section>
