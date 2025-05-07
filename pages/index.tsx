@@ -47,8 +47,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
-              text="Now on air: Moodymann - It's 2 Late 4 U And Me"
-              url="https://youtu.be/qpBybYez25I?si=Pf0q-YYKaCsFmPtc&t=144"
+              text="Now on air: Jorge Zamacona - Built In Crunch"
+              url="https://youtu.be/8D3ZuQkSC_E?si=7Hngp0SQxWHogOJN&t=116"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10 text-gray-200">
