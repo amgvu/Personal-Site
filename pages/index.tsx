@@ -1,12 +1,11 @@
 import Head from "next/head";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { AiFillLinkedin, AiFillGithub, } from "react-icons/ai";
+import { MdFileDownload } from "react-icons/md";
+import { FaSoundcloud, FaDiscord } from "react-icons/fa";
 import RadioComponent from "../components/RadioComponent";
-import EmailForm from "../components/EmailForm";
 import AmbientBackground from "../components/AmbientBackground";
 import VisualizerButton from "../components/VisualizerButton";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { FaSoundcloud, FaDiscord, FaNode, FaPlay } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 
 const socialIcons = [
@@ -32,10 +31,26 @@ const resumePdfPath = "KevinVu_SoftwareEngineer_Resume.pdf";
 
 export default function Home() {
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
+  const hoverBoxRef = useRef<HTMLDivElement>(null);
+
+  const onHover = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const { offsetLeft, offsetWidth } = e.currentTarget;
+    if (hoverBoxRef.current) {
+      hoverBoxRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      hoverBoxRef.current.style.width = offsetWidth + "px";
+    }
+  };
+
+  const onLeave = () => {
+    if (hoverBoxRef.current) {
+      hoverBoxRef.current.style.width = "0px";
+    }
+  };
 
   const openResumePdf = () => {
     window.open(resumePdfPath, "_blank");
   };
+
   return (
     <div className="scrollbar-hide">
       <Head>
@@ -51,42 +66,41 @@ export default function Home() {
               url="https://youtu.be/8D3ZuQkSC_E?si=7Hngp0SQxWHogOJN&t=116"
             />
           </div>
-          <nav className="mb-12 flex justify-end py-10 text-gray-200">
+          <nav className="mb-12 flex justify-end py-10">
             <h1 className="text-xl"></h1>
-            <ul className="flex items-center">
-              <li>
-                <motion.button
-                  className="px-6 py-2 rounded-md relative radial-gradient ease-in-out animate__fadeIn animate__delay-1s animate__animated"
-                  initial={{ "--x": "100%", scale: 1 } as any}
-                  animate={{ "--x": "-100%" } as any}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    repeatDelay: 1,
-                    type: "spring",
-                    stiffness: 20,
-                    damping: 15,
-                    mass: 2,
-                    scale: {
-                      type: "spring",
-                      stiffness: 10,
-                      damping: 5,
-                      mass: 0.1,
-                    },
-                  }}
-                  onClick={openResumePdf}
-                >
-                  <span
-                    className="text-neutral-100 tracking-wide font-light
-                                  h-full w-full block relative linear-mask"
+            <div
+              className="relative relative-hover"
+              onMouseLeave={onLeave}
+            >
+              <div
+                ref={hoverBoxRef}
+                aria-hidden="true"
+                className="hover-box absolute h-full rounded-6 bg-neutral-900 rounded-md transition-all duration-200"
+              ></div>
+              <ul className="flex relative z-20">
+                <li onMouseOver={onHover} className="flex">
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("projects")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="px-4 py-2 text-neutral-100 tracking-wide font-medium hover:text-white rounded-md transition-all duration-100"
+                  >
+                    Projects
+                  </button>
+                </li>
+                <li onMouseOver={onHover} className="flex ml-4">
+                  <button
+                    onClick={openResumePdf}
+                    className="px-4 py-2 text-neutral-100 tracking-wide font-medium hover:text-white rounded-md transition-all duration-100"
                   >
                     Resume
-                  </span>
-                  <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
-                </motion.button>
-              </li>
-            </ul>
+                    <MdFileDownload className="inline-block ml-1" />
+                  </button>
+                </li>
+              </ul>
+            </div>
           </nav>
           <div className="relative bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
             <div
@@ -103,11 +117,11 @@ export default function Home() {
               Kevin Vu
             </h2>
             <h3 className="py-2 text-2xl font-medium text-gray-300 animate__fadeIn animate__delay animate__animated md:text-5xl">
-              Software Developer
+              Software Engineer & Founder
             </h3>
             <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
               Hi! 👋 thanks for stopping by, I&apos;m a full-stack developer
-              based in Houston, TX. I love all things tech and I also DJ.
+              based in Houston, TX. I love all things tech and I also DJ sometimes.
             </p>
             <div className="animate__fadeIn animate__delay-1s animate__animated">
               {socialIcons.map((item, index) => (
@@ -123,28 +137,21 @@ export default function Home() {
           </div>
           <div className="my-3 text-gray-200 grid grid-cols-1 justify-center"></div>
         </section>
-        <div className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4">
+        <div
+          id="projects"
+          className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4"
+        >
           <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-gray-200">
-            Projects
+            My Work
           </h2>
           <p className="text-center text-xl text-gray-300 font-light space-y-1">
-            These are some of the projects I&apos;ve built and contributed to!
+            Some of the stuff I&apos;ve built and contributed to
           </p>
           <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
             <ProjectCard
               title="Arclify"
-              description="Discord nicknames and roles management application"
+              description="Discord nicknames management, but fun."
               link="https://arclify.vercel.app/"
-            />
-            <ProjectCard
-              title="Worble"
-              description="Lightweight Discord backend service for Arclify. Built with Discord.js"
-              link="https://github.com/amgvu/Worble"
-            />
-            <ProjectCard
-              title="ShopSentry"
-              description="Python web scraper bot that checks if a product is in stock"
-              link="https://github.com/amgvu/ShopSentry"
             />
             <ProjectCard
               title="HawkHacks/Landing"
@@ -157,8 +164,13 @@ export default function Home() {
               link="https://portal.hawkhacks.ca/login?from=/"
             />
             <ProjectCard
+              title="ShopSentry"
+              description="Python web scraper bot that checks if a product is in stock"
+              link="https://github.com/amgvu/ShopSentry"
+            />
+            <ProjectCard
               title="Personal Site"
-              description="This website :D"
+              description="This site :D"
               link="https://github.com/amgvu/Personal-Site"
             />
           </section>
@@ -166,13 +178,6 @@ export default function Home() {
         <section className="text-center">
           <div>
             <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200"></p>
-          </div>
-        </section>
-        <section>
-          <div>
-            <h3 className="text-sm dark:text-white animate__fadeIn animate__delay-1s animate__animated">
-              <EmailForm />
-            </h3>
           </div>
         </section>
       </main>

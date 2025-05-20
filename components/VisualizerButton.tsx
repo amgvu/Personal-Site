@@ -10,13 +10,13 @@ const VisualizerButton: React.FC<VisualizerButtonProps> = ({ isVisible, onToggle
   return (
     <div className="fixed bottom-9 right-20 flex items-end gap-4 z-50 animate__fadeIn animate__delay-1s animate__animated">
       <div className="flex mb-1 flex-col">
-        <span className="text-white/80 text-sm">Enable Visualizer</span>
-        <span className="text-red-400 text-xs">Photosensitive Caution</span>
+        <span className="text-white/80 text-sm">Toggle Background</span>
+        <span className="text-blue-300 text-xs">Mildly Photosensitive</span>
       </div>
       <div className="relative group">
         <button 
           onClick={onToggle}
-          className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+          className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors duration-100 cursor-pointer"
         >
           {!isVisible ? 
             <BsFillPlayFill className="w-4 h-4 text-white" /> : 
