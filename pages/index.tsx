@@ -62,8 +62,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
-              text="Now on air: Jorge Zamacona - Built In Crunch"
-              url="https://youtu.be/8D3ZuQkSC_E?si=7Hngp0SQxWHogOJN&t=116"
+              text=" Now on air: Rick Wade @ RTS.FM Studio - 12.12.2008"
+              url="https://youtu.be/Y0pXuLSjXY8?si=njUAVjUh360gz7TC&t=2026"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10">
@@ -142,7 +142,7 @@ export default function Home() {
           className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4"
         >
           <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-gray-200">
-            My Work
+            Projects
           </h2>
           <p className="text-center text-xl text-gray-300 font-light space-y-1">
             Some of the stuff I&apos;ve built and contributed to

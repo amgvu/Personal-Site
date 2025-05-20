@@ -11,7 +11,7 @@ const VisualizerButton: React.FC<VisualizerButtonProps> = ({ isVisible, onToggle
     <div className="fixed bottom-9 right-20 flex items-end gap-4 z-50 animate__fadeIn animate__delay-1s animate__animated">
       <div className="flex mb-1 flex-col">
         <span className="text-white/80 text-sm">Toggle Background</span>
-        <span className="text-blue-300 text-xs">Mildly Photosensitive</span>
+        <span className="text-blue-300 text-xs">Photosensitive Warning</span>
       </div>
       <div className="relative group">
         <button 

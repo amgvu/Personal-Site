@@ -61,7 +61,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
             <motion.div
               className="whitespace-nowrap text-gray-300"
               animate={{
-                x: ["100%", "-144%"],
+                x: ["100%", "-158%"],
               }}
               transition={{
                 duration: 5,
