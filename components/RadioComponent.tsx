@@ -64,7 +64,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
                 x: ["100%", "-248%"],
               }}
               transition={{
-                duration: 5,
+                duration: 8,
                 repeat: Infinity,
                 ease: "linear",
               }}
