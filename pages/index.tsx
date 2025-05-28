@@ -62,8 +62,8 @@ export default function Home() {
           <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
-              text=" Now on air: Rick Wade @ RTS.FM Studio - 12.12.2008"
-              url="https://youtu.be/Y0pXuLSjXY8?si=njUAVjUh360gz7TC&t=2026"
+              text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
+              url="https://youtu.be/rGXwifOFtEA?si=1aS5lI27-tlvb5Y8&t=121"
             />
           </div>
           <nav className="mb-12 flex justify-end py-10">
