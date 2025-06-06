@@ -1,31 +1,12 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
-import { AiFillLinkedin, AiFillGithub, } from "react-icons/ai";
 import { MdFileDownload } from "react-icons/md";
-import { FaSoundcloud, FaDiscord } from "react-icons/fa";
+import { socialIcons } from "../types/socialData";
 import RadioComponent from "../components/RadioComponent";
 import AmbientBackground from "../components/AmbientBackground";
 import VisualizerButton from "../components/VisualizerButton";
 import ProjectCard from "../components/ProjectCard";
 
-const socialIcons = [
-  { icon: AiFillGithub, link: "https://github.com/amgvu/", title: "GitHub" },
-  {
-    icon: AiFillLinkedin,
-    link: "https://www.linkedin.com/in/kevinvu-dev/",
-    title: "Linkedin",
-  },
-  {
-    icon: FaDiscord,
-    link: "https://discord.com/users/216339214978121728",
-    title: "Discord",
-  },
-  {
-    icon: FaSoundcloud,
-    link: "https://soundcloud.com/kevinvuu",
-    title: "Soundcloud",
-  },
-];
 
 const resumePdfPath = "KevinVu_SoftwareEngineer_Resume.pdf";
 
