@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlay, FaPause } from "react-icons/fa";
 import ReactPlayer from "react-player";
-import MusicLoader from "./MusicLoading";
+import MusicLoader from "./MusicLoader";
 import VolumeSlider from "./VolumeSlider";
 
 interface RadioComponentProps {
@@ -10,7 +10,7 @@ interface RadioComponentProps {
   url: string;
 }
 
-const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
+export default function RadioComponent({ text, url }: RadioComponentProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
@@ -36,11 +36,13 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
 
   return (
     <div className="relative">
-      <div className="absolute top-[43px] w-2/12 transform bg-white bg-opacity-[.04] p-2 rounded-lg border border-zinc-700">
-        {isLoading && isPlaying && <MusicLoader className="mt-12 left-60 fixed" />}
+      <div className="absolute top-[43px] w-2/12 transform rounded-lg border border-zinc-700 bg-white bg-opacity-[.04] p-2">
+        {isLoading && isPlaying && (
+          <MusicLoader className="fixed left-60 mt-12" />
+        )}
         <div className="flex items-center">
-          <div className="absolute right-[-32px] overflow-visible top-[8px]">
-            <div className="cursor-pointer ml-5" onClick={handlePlayPause}>
+          <div className="absolute right-[-32px] top-[8px] overflow-visible">
+            <div className="ml-5 cursor-pointer" onClick={handlePlayPause}>
               <motion.div
                 key={isPlaying ? "pause" : "play"}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -49,9 +51,9 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
                 transition={{ duration: 0.3 }}
               >
                 {isPlaying ? (
-                  <FaPause className="text-gray-100 text-2xl" />
+                  <FaPause className="text-2xl text-gray-100" />
                 ) : (
-                  <FaPlay className="text-gray-100 text-2xl" />
+                  <FaPlay className="text-2xl text-gray-100" />
                 )}
               </motion.div>
             </div>
@@ -102,6 +104,4 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ text, url }) => {
       )}
     </div>
   );
-};
-
-export default RadioComponent;
+}

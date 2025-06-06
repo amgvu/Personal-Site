@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { useState, useRef } from "react";
-import { MdFileDownload } from "react-icons/md";
-import RadioComponent from "../components/RadioComponent";
-import AmbientBackground from "../components/AmbientBackground";
-import VisualizerButton from "../components/VisualizerButton";
+import { useState } from "react";
+
+import RadioComponent from "../components/MusicDanceExperience/RadioPlayer/RadioComponent";
+import AmbientBackground from "../components/MusicDanceExperience/AmbientBackground";
+import VisualizerButton from "../components/MusicDanceExperience/VisualizerButton";
 import HeadContent from "../components/page/HeadContent";
 import Navbar from "../components/page/Navbar";
 import Projects from "../components/page/Projects";
@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <main className="px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <div className="animate__fadeIn animate__delay-1s animate__animated invisible font-bold ease-in-out sm:visible">
+          <div className="font-bold sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
               text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
@@ -30,11 +30,12 @@ export default function Home() {
           <HeadContent />
         </section>
         <Projects />
+
+        <VisualizerButton
+          isVisible={isBackgroundVisible}
+          onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
+        />
       </main>
-      <VisualizerButton
-        isVisible={isBackgroundVisible}
-        onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
-      />
     </div>
   );
 }

@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const AmbientBackground = () => {
+export default function AmbientBackground() {
   const beatDuration = 60 / 140;
 
   return (
     <div
-      className="fixed inset-0 overflow-hidden animate__fadeIn animate__delay-0.5s animate__animated blur-3xl"
+      className="animate__fadeIn animate__delay-0.5s animate__animated fixed inset-0 overflow-hidden blur-3xl"
       style={{ zIndex: -1 }}
     >
-      <svg className="w-0 h-0">
+      <svg className="h-0 w-0">
         <defs></defs>
       </svg>
 
       <div className="absolute inset-0">
         <motion.div
-          className="absolute w-96 h-96 rounded-full bg-slate-700/50"
+          className="absolute h-96 w-96 rounded-full bg-slate-700/50"
           animate={{
             scale: [2, 2.2, 2],
             opacity: [0.3, 0.4, 0.3],
@@ -33,7 +33,7 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-160 h-160 rounded-full bg-slate-500/50"
+          className="w-160 h-160 absolute rounded-full bg-slate-500/50"
           animate={{
             scale: [6, 4.7, 6],
             opacity: [0.25, 0.35, 0.25],
@@ -52,7 +52,7 @@ const AmbientBackground = () => {
         />
 
         <motion.div
-          className="absolute w-144 h-144 rounded-full bg-slate-500/20"
+          className="w-144 h-144 absolute rounded-full bg-slate-500/20"
           animate={{
             scale: [8, 6.66, 8],
             opacity: [0.2, 0.3, 0.2],
@@ -73,7 +73,7 @@ const AmbientBackground = () => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-80 h-80 rounded-full"
+            className="absolute h-80 w-80 rounded-full"
             style={{
               background: `rgba(${
                 [
@@ -103,7 +103,7 @@ const AmbientBackground = () => {
         {[...Array(4)].map((_, i) => (
           <motion.div
             key={`small-${i}`}
-            className="absolute w-24 h-24 rounded-full"
+            className="absolute h-24 w-24 rounded-full"
             style={{
               background: `rgba(${
                 [
@@ -131,6 +131,4 @@ const AmbientBackground = () => {
       </div>
     </div>
   );
-};
-
-export default AmbientBackground;
+}

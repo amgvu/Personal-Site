@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import React from "react";
 import { FaVolumeUp } from "react-icons/fa";
@@ -14,7 +13,7 @@ const StyledInput = styled.input`
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   height: 8px;
-  
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -24,7 +23,7 @@ const StyledInput = styled.input`
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.2s;
-    
+
     &:hover {
       background: rgba(255, 255, 255, 1);
     }
@@ -38,14 +37,17 @@ const StyledInput = styled.input`
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.2s;
-    
+
     &:hover {
       background: rgba(255, 255, 255, 1);
     }
   }
 `;
 
-const VolumeSlider: React.FC<VolumeSliderProps> = ({ volume, onVolumeChange }) => {
+export default function VolumeSlider({
+  volume,
+  onVolumeChange,
+}: VolumeSliderProps) {
   return (
     <motion.div
       className="absolute top-2 flex items-center space-x-2 p-2 shadow-lg"
@@ -54,7 +56,7 @@ const VolumeSlider: React.FC<VolumeSliderProps> = ({ volume, onVolumeChange }) =
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
     >
-      <FaVolumeUp className="text-gray-300 text-lg" />
+      <FaVolumeUp className="text-lg text-gray-300" />
       <StyledInput
         type="range"
         min="0"
@@ -62,10 +64,8 @@ const VolumeSlider: React.FC<VolumeSliderProps> = ({ volume, onVolumeChange }) =
         step="0.01"
         value={volume}
         onChange={onVolumeChange}
-        className="bg-white/10 rounded-lg appearance-none h-2"
+        className="h-2 appearance-none rounded-lg bg-white/10"
       />
     </motion.div>
   );
-};
-
-export default VolumeSlider;
+}

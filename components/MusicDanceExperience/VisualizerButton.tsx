@@ -6,10 +6,10 @@ interface VisualizerButtonProps {
   onToggle: () => void;
 }
 
-const VisualizerButton: React.FC<VisualizerButtonProps> = ({
+export default function VisualizerButton({
   isVisible,
   onToggle,
-}) => {
+}: VisualizerButtonProps) {
   return (
     <div className="invisible fixed bottom-0 right-0 z-50 sm:visible">
       <div className="animate__fadeIn animate__delay-1s animate__animated fixed bottom-9 right-20 z-50 flex items-end gap-4">
@@ -34,6 +34,4 @@ const VisualizerButton: React.FC<VisualizerButtonProps> = ({
       </div>
     </div>
   );
-};
-
-export default VisualizerButton;
+}
