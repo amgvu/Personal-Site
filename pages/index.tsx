@@ -6,7 +6,7 @@ import RadioComponent from "../components/RadioComponent";
 import AmbientBackground from "../components/AmbientBackground";
 import VisualizerButton from "../components/VisualizerButton";
 import ProjectCard from "../components/ProjectCard";
-
+import HeadContent from "../components/page/HeadContent";
 
 const resumePdfPath = "KevinVu_SoftwareEngineer_Resume.pdf";
 
@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <main className="px-4 md:px-8 lg:px-16 xl:px-32">
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <div className="ease-in-out animate__fadeIn animate__delay-1s animate__animated font-bold invisible sm:visible">
+          <div className="animate__fadeIn animate__delay-1s animate__animated invisible font-bold ease-in-out sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioComponent
               text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
@@ -49,16 +49,13 @@ export default function Home() {
           </div>
           <nav className="mb-12 flex justify-end py-10">
             <h1 className="text-xl"></h1>
-            <div
-              className="relative relative-hover"
-              onMouseLeave={onLeave}
-            >
+            <div className="relative-hover relative" onMouseLeave={onLeave}>
               <div
                 ref={hoverBoxRef}
                 aria-hidden="true"
-                className="hover-box absolute h-full rounded-6 bg-neutral-900 rounded-md transition-all duration-200"
+                className="hover-box rounded-6 absolute h-full rounded-md bg-neutral-900 transition-all duration-200"
               ></div>
-              <ul className="flex relative z-20">
+              <ul className="relative z-20 flex">
                 <li onMouseOver={onHover} className="flex">
                   <button
                     onClick={() =>
@@ -66,69 +63,36 @@ export default function Home() {
                         .getElementById("projects")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="px-4 py-2 text-neutral-100 tracking-wide font-medium hover:text-white rounded-md transition-all duration-100"
+                    className="rounded-md px-4 py-2 font-medium tracking-wide text-neutral-100 transition-all duration-100 hover:text-white"
                   >
                     Projects
                   </button>
                 </li>
-                <li onMouseOver={onHover} className="flex ml-4">
+                <li onMouseOver={onHover} className="ml-4 flex">
                   <button
                     onClick={openResumePdf}
-                    className="px-4 py-2 text-neutral-100 tracking-wide font-medium hover:text-white rounded-md transition-all duration-100"
+                    className="rounded-md px-4 py-2 font-medium tracking-wide text-neutral-100 transition-all duration-100 hover:text-white"
                   >
                     Resume
-                    <MdFileDownload className="inline-block ml-1" />
+                    <MdFileDownload className="ml-1 inline-block" />
                   </button>
                 </li>
               </ul>
             </div>
           </nav>
-          <div className="relative bottom-20 flex flex-grow flex-col place-content-center p-10 py-10 text-center sm:text-center">
-            <div
-              className="absolute top-7 left-1 duration-300 animate__fadeIn
-              animate__delay-2s animate__animated visible sm:invisible"
-            ></div>
-            <div
-              className="absolute right-2 top-[-90px] bottom-10 flex justify-center items-center h-screen w-full"
-              style={{ zIndex: 0, pointerEvents: "none" }}
-            >
-              <div className="duration-300 animate__fadeIn animate__delay-2s animate__animated invisible sm:visible"></div>
-            </div>
-            <h2 className="py-2 text-5xl font-semibold text-gray-200 animate__fadeIn animate__animated dark:text-gray-200 md:text-9xl">
-              Kevin Vu
-            </h2>
-            <h3 className="py-2 text-2xl font-medium text-gray-300 animate__fadeIn animate__delay animate__animated md:text-5xl">
-              Software Engineer & Founder
-            </h3>
-            <p className="text-md py-5 text-[#8A8A8A] animate__fadeIn animate__delay-1s animate__animated dark:text-gray-300 md:text-xl">
-              Hi! 👋 thanks for stopping by, I&apos;m a full-stack developer
-              based in Houston, TX. I love all things tech and I also DJ sometimes.
-            </p>
-            <div className="animate__fadeIn animate__delay-1s animate__animated">
-              {socialIcons.map((item, index) => (
-                <button
-                  key={index}
-                  className="delay-10 flex-row gap-16 bg-transparent p-2 sm:p-3 py-3 text-5xl text-gray-100 transition duration-100 ease-in-out hover:-translate-y-1"
-                  onClick={() => window.open(item.link)}
-                >
-                  <item.icon />
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="my-3 text-gray-200 grid grid-cols-1 justify-center"></div>
+          <HeadContent />
         </section>
         <div
           id="projects"
-          className="max-w-6xl animate__fadeIn animate__delay-1s animate__animated mx-auto px-4"
+          className="animate__fadeIn animate__delay-1s animate__animated mx-auto max-w-6xl px-4"
         >
-          <h2 className="text-3xl py-3 mt-6 font-semibold text-center text-gray-200">
+          <h2 className="mt-6 py-3 text-center text-3xl font-semibold text-gray-200">
             Projects
           </h2>
-          <p className="text-center text-xl text-gray-300 font-light space-y-1">
+          <p className="space-y-1 text-center text-xl font-light text-gray-300">
             Some of the stuff I&apos;ve built and contributed to
           </p>
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+          <section className="grid grid-cols-1 gap-4 py-10 md:grid-cols-2">
             <ProjectCard
               title="Arclify"
               description="Discord nicknames management, but fun."
@@ -158,11 +122,11 @@ export default function Home() {
         </div>
         <section className="text-center">
           <div>
-            <p className="text-md space-x-4 flex flex-row justify-center py-6 leading-8 text-gray-800 animate__fadeInUp animate__delay-3s animate__animated dark:text-gray-200"></p>
+            <p className="text-md animate__fadeInUp animate__delay-3s animate__animated flex flex-row justify-center space-x-4 py-6 leading-8 text-gray-800 dark:text-gray-200"></p>
           </div>
         </section>
       </main>
-      <div className="fixed bottom-0 right-0 z-50 invisible sm:visible">
+      <div className="invisible fixed bottom-0 right-0 z-50 sm:visible">
         <VisualizerButton
           isVisible={isBackgroundVisible}
           onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
