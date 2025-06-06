@@ -30,18 +30,11 @@ export default function Home() {
           <HeadContent />
         </section>
         <Projects />
-        <section className="text-center">
-          <div>
-            <p className="text-md animate__fadeInUp animate__delay-3s animate__animated flex flex-row justify-center space-x-4 py-6 leading-8 text-gray-800 dark:text-gray-200"></p>
-          </div>
-        </section>
       </main>
-      <div className="invisible fixed bottom-0 right-0 z-50 sm:visible">
-        <VisualizerButton
-          isVisible={isBackgroundVisible}
-          onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
-        />
-      </div>
+      <VisualizerButton
+        isVisible={isBackgroundVisible}
+        onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
+      />
     </div>
   );
 }
