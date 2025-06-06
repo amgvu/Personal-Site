@@ -1,12 +1,14 @@
 import Head from "next/head";
 import { useState } from "react";
 
-import RadioComponent from "../components/MusicDanceExperience/RadioPlayer/RadioComponent";
-import AmbientBackground from "../components/MusicDanceExperience/AmbientBackground";
-import VisualizerButton from "../components/MusicDanceExperience/VisualizerButton";
-import HeadContent from "../components/page/HeadContent";
-import Navbar from "../components/page/Navbar";
-import Projects from "../components/page/Projects";
+import {
+  HeadContent,
+  Navbar,
+  Projects,
+  RadioPlayer,
+  VisualizerButton,
+  AmbientBackground,
+} from "../components/index";
 
 export default function Home() {
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
@@ -21,7 +23,7 @@ export default function Home() {
         <section className="flex min-h-screen flex-grow flex-col place-content-center">
           <div className="font-bold sm:visible">
             {isBackgroundVisible && <AmbientBackground />}
-            <RadioComponent
+            <RadioPlayer
               text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
               url="https://youtu.be/rGXwifOFtEA?si=1aS5lI27-tlvb5Y8&t=121"
             />

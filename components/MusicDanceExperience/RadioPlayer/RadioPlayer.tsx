@@ -5,12 +5,12 @@ import ReactPlayer from "react-player";
 import MusicLoader from "./MusicLoader";
 import VolumeSlider from "./VolumeSlider";
 
-interface RadioComponentProps {
+interface RadioPlayerProps {
   text: string;
   url: string;
 }
 
-export default function RadioComponent({ text, url }: RadioComponentProps) {
+export default function RadioPlayer({ text, url }: RadioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);

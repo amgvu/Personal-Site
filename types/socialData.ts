@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillGithub, } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FaSoundcloud, FaDiscord } from "react-icons/fa";
 
 export const socialIcons = [
