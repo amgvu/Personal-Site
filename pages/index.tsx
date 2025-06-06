@@ -19,8 +19,8 @@ export default function Home() {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
       <main className="px-4 md:px-8 lg:px-16 xl:px-32">
-        <section className="flex min-h-screen flex-grow flex-col place-content-center">
-          <div className="font-bold sm:visible">
+        <section className="flex min-h-screen flex-grow flex-col">
+          <div className="invisible font-bold md:visible">
             {isBackgroundVisible && <AmbientBackground />}
             <RadioPlayer
               text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
