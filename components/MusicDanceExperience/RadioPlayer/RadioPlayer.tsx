@@ -63,7 +63,7 @@ export default function RadioPlayer({ text, url }: RadioPlayerProps) {
             <motion.div
               className="whitespace-nowrap text-gray-300"
               animate={{
-                x: ["100%", "-248%"],
+                x: ["100%", "-150%"],
               }}
               transition={{
                 duration: 8,

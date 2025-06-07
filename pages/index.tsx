@@ -15,23 +15,32 @@ export default function Home() {
   return (
     <div className="scrollbar-hide">
       <Head>
-        <title>Kevin Vu | Portfolio</title>
+        <title>Kevin Vu | Software Engineer & Founder</title>
+        <meta
+          name="description"
+          content="Personal portfolio of Kevin Vu, Full-stack Developer based in Houston, TX"
+        />
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
-      <main className="px-4 md:px-8 lg:px-16 xl:px-32">
-        <section className="flex min-h-screen flex-grow flex-col">
-          <div className="invisible font-bold md:visible">
-            {isBackgroundVisible && <AmbientBackground />}
+
+      <main className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:mx-auto 2xl:max-w-7xl">
+        {isBackgroundVisible && <AmbientBackground />}
+
+        <section className="flex min-h-screen flex-col">
+          <div
+            className={`font-bold ${
+              isBackgroundVisible ? "text-white" : "text-gray-800"
+            } transition-colors`}
+          >
             <RadioPlayer
-              text=" Now on air: Romanthony - Trust (Motor City Drum Ensemble Instrumental Dub)"
-              url="https://youtu.be/rGXwifOFtEA?si=1aS5lI27-tlvb5Y8&t=121"
+              text="Now on air: Quelza @TheLotRadio 05-19-2025"
+              url="https://youtu.be/4csOxZWoCcU?si=_SoNYFgDBgMhjz1F&t=2259"
             />
           </div>
           <Navbar />
           <HeadContent />
         </section>
         <Projects />
-
         <VisualizerButton
           isVisible={isBackgroundVisible}
           onToggle={() => setIsBackgroundVisible(!isBackgroundVisible)}
