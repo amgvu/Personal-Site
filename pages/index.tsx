@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      <main className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:mx-auto 2xl:max-w-7xl">
+      <main className="2xl:max-w-8xl px-4 md:px-8 lg:px-16 xl:px-32 2xl:mx-auto">
         {isBackgroundVisible && <AmbientBackground />}
 
         <section className="flex min-h-screen flex-col">

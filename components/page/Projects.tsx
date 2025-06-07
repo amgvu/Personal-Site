@@ -15,7 +15,7 @@ export default function Projects() {
       <section className="grid grid-cols-1 gap-4 py-10 md:grid-cols-2">
         <ProjectCard
           title="Arclify"
-          description="Discord nicknames management, but fun."
+          description="Automating the busywork of Discord server management. Currently in pre-launch phase with active user-testing underway."
           link="https://arclify.vercel.app/"
         />
         <ProjectCard
