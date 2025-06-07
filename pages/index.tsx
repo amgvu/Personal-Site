@@ -28,7 +28,7 @@ export default function Home() {
 
         <section className="flex min-h-screen flex-col">
           <div
-            className={`font-bold ${
+            className={`invisible font-bold md:visible ${
               isBackgroundVisible ? "text-white" : "text-gray-800"
             } transition-colors`}
           >
